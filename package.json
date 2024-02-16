@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "cdbreact": "^1.5.18",
+    "react-data-table-component": "^7.6.2",
+    "styled-components": "^6.1.8"
+  }
+}
