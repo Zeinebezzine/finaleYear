@@ -2,7 +2,7 @@ const UserModel = require("../models/Utilisateur");
 
 exports.ajoutDirecteur = async (req, res) => {
   try {
-    const { nom, prenom, email, password, tel } = req.body;
+    const { nom, prenom, email, password, tel, CIN } = req.body;
     const role = "directeur";
 
     const newDirector = new UserModel({
@@ -12,6 +12,7 @@ exports.ajoutDirecteur = async (req, res) => {
       tel,
       password,
       role,
+      CIN,
     });
 
     await newDirector.save();
@@ -24,11 +25,10 @@ exports.ajoutDirecteur = async (req, res) => {
 
 exports.getDirectors = async (req, res) => {
   try {
-    const directors = await UserModel.find({ role: "directeur" }); 
+    const directors = await UserModel.find({ role: "directeur" });
     res.json(directors);
   } catch (error) {
     console.error("Error fetching directors:", error);
     res.status(500).json({ message: "Error fetching directors" });
   }
 };
-

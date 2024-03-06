@@ -15,11 +15,8 @@ const PORT = 3001;
 
 app.post("/register", userController.register);
 app.post("/login", userController.login);
-app.get("/login", universityController.getUniversities);
-app.get(
-  "/Rect1/establishments",
-  universityController.getEstablishmentsForUniversity
-);
+app.get("/universities", universityController.getUniversities);
+app.get("/etablissement", universityController.getEstablishmentsForUniversity);
 app.post("/Rect1/directors", directorController.ajoutDirecteur);
 app.get("/Rect1/directors", directorController.getDirectors);
 app.listen(PORT, () => {

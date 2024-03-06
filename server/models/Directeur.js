@@ -1,11 +1,11 @@
 const mongoose = require("mongoose");
-const UserSchema = require("./UserSchema");
+const UserSchema = require("./Utilisateur");
 
 const DirecteurSchema = new mongoose.Schema({
-  EtabID: Number,
+  EtabID: number,
 });
 
-//heritage  de la schema user
+//discriminating from the User model based on the 'role' field(inherance)
 const DirecteurModel = UserSchema.discriminator("directeur", DirecteurSchema);
 
 module.exports = DirecteurModel;

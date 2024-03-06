@@ -12,15 +12,21 @@ exports.getUniversities = (req, res) => {
 };
 
 exports.getEstablishmentsForUniversity = (req, res) => {
-  const universityId = 7;
+  const id = 7;
 
-  UniversityModel.findById(universityId)
+  UniversityModel.findOne({ id: id })
     .then((university) => {
       if (!university) {
         return res.status(404).json({ error: "University not found" });
       }
+      if (!university.Etablissement) {
+        return res.status(404).json({ error: "Establishments not found for this university" });
+      }
       const establishments = university.Etablissement;
       res.json(establishments);
     })
-    .catch((error) => res.status(500).json({ error: "Internal server error" }));
+    .catch((error) => {
+      console.error("Error fetching university:", error);
+      res.status(500).json({ error: "Internal server error" });
+    });
 };
