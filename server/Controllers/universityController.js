@@ -19,7 +19,7 @@ exports.getEstablishmentsForUniversity = (req, res) => {
       if (!university) {
         return res.status(404).json({ error: "University not found" });
       }
-      const establishments = university.establishments;
+      const establishments = university.Etablissement;
       res.json(establishments);
     })
     .catch((error) => res.status(500).json({ error: "Internal server error" }));
