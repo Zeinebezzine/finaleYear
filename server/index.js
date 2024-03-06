@@ -5,6 +5,8 @@ const userController = require("./Controllers/userController");
 const universityController = require("./Controllers/universityController");
 //const universityController = require("./Controllers/universityController");
 const directorController = require("./Controllers/directorController");
+const financierController = require("./Controllers/financierController");
+const pedagogiqueController = require("./Controllers/pedagogiqueController");
 const app = express();
 app.use(express.json());
 app.use(cors());
@@ -19,6 +21,9 @@ app.get("/universities", universityController.getUniversities);
 app.get("/etablissement", universityController.getEstablishmentsForUniversity);
 app.post("/Rect1/directors", directorController.ajoutDirecteur);
 app.get("/Rect1/directors", directorController.getDirectors);
+app.put("/directors/:id", directorController.updateDirector);
+app.post("/pedagogique", pedagogiqueController.ajoutPedagogique);
+app.post("/financier", financierController.ajoutFinancier);
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });

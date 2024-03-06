@@ -32,3 +32,24 @@ exports.getDirectors = async (req, res) => {
     res.status(500).json({ message: "Error fetching directors" });
   }
 };
+
+exports.updateDirector = async(reqres)=>{
+  try{
+    const{id} = req.params
+    const { nom,prenom,email,password,tel,CIN} = req.body;
+    const director = await UserModel.findById(id)
+
+    director.nom = nom || director.nom;
+    director.prenom = prenom || director.prenom;
+    director.email = email || director.email;
+    director.tel = tel || director.tel;
+    director.password = password || director.password;
+    director.CIN = CIN || director.CIN;
+
+    await director.save();
+    res.json({ message: "Director updated successfully", director });
+  } catch (error) {
+    console.error("Error updating director:", error);
+    res.status(500).json({ message: "Error updating director" });
+  }
+};

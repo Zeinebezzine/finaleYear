@@ -8,7 +8,7 @@ const UserSchema = new mongoose.Schema({
   tel: String,
   role: {
     type: String,
-    enum: ["directeur", "rect1", "rect2", "financier"],
+    enum: ["directeur", "rect1", "rect2", "financier", "pedagogique"],
     required: true,
   },
 });
