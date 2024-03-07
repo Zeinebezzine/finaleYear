@@ -15,7 +15,7 @@ exports.ajoutFinancier = async (req, res) => {
       CIN,
     });
 
-    await newDirector.save();
+    await newFinancier.save();
     res.status(201).json({ message: "Financier ajouté avec succès" });
   } catch (error) {
     console.error("erreur d'ajout", error);

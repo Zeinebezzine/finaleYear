@@ -5,7 +5,7 @@ exports.ajoutPedagogique = async (req, res) => {
     const { nom, prenom, email, password, tel, CIN } = req.body;
     const role = "pedagogique";
 
-    const newDirector = new UserModel({
+    const newPedagogique = new UserModel({
       nom,
       prenom,
       email,
@@ -15,7 +15,7 @@ exports.ajoutPedagogique = async (req, res) => {
       CIN,
     });
 
-    await newDirector.save();
+    await newPedagogique.save();
     res.status(201).json({ message: "Admin pedagogique ajouté avec succès" });
   } catch (error) {
     console.error("erreur d'ajout", error);
