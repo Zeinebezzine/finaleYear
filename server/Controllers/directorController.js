@@ -2,7 +2,7 @@ const UserModel = require("../models/Utilisateur");
 
 exports.ajoutDirecteur = async (req, res) => {
   try {
-    const { nom, prenom, email, password, tel, CIN } = req.body;
+    const { nom, prenom, email, password, tel, CIN, idEtab } = req.body;
     const role = "directeur";
 
     const directeurExist = await UserModel.findOne({ email });
@@ -18,6 +18,7 @@ exports.ajoutDirecteur = async (req, res) => {
       password,
       role,
       CIN,
+      idEtab,
     });
 
     await newDirector.save();

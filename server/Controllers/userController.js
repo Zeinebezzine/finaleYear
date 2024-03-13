@@ -1,4 +1,7 @@
 const UserModel = require("../models/Utilisateur");
+const jwt = require("jsonwebtoken");
+const jwtSecret =
+  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+";
 
 exports.register = (req, res) => {
   const { email, password } = req.body;
@@ -15,15 +18,41 @@ exports.register = (req, res) => {
 
 exports.login = (req, res) => {
   const { email, password } = req.body;
-  UserModel.findOne({ email: email }).then(user=> {
-    if (user) {
-      if (user.password === password) {
-        res.json("Sucess");
+  UserModel.findOne({ email: email })
+    .then((user) => {
+      if (user) {
+        if (user.password === password) {
+          jwt.sign(
+            {
+              email: user.email,
+              id: user._id,
+              name: user.name,
+              role: user.role,
+            },
+            jwtSecret,
+            { expiresIn: "4h" },
+            (err, token) => {
+              if (err) {
+                console.error("Error generating JWT token:", err);
+                return res
+                  .status(500)
+                  .json({ message: "Internal Server Error" });
+              }
+              // Respond with user data and token
+              res.json({ user, token });
+            }
+          );
+        } else {
+          // Passwords do not match
+          res.json("Mot de passe erroné");
+        }
       } else {
-        res.json("Mot de passe erroné");
+        // User not found
+        res.json("Utilisateur non enregistré,Contactez l'administrateur!");
       }
-    } else {
-      res.json("Utilisateur non enregistré,Contactez l'administrateur!");
-    }
-  });
+    })
+    .catch((err) => {
+      console.error("Error finding user:", err);
+      res.status(500).json({ message: "Internal Server Error" });
+    });
 };
