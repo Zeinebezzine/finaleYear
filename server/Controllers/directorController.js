@@ -5,6 +5,11 @@ exports.ajoutDirecteur = async (req, res) => {
     const { nom, prenom, email, password, tel, CIN } = req.body;
     const role = "directeur";
 
+    const directeurExist = await UserModel.findOne({ email });
+    if (directeurExist) {
+      return res.status(409).json({ message: "Directeur existe deja" });
+    }
+
     const newDirector = new UserModel({
       nom,
       prenom,
@@ -33,11 +38,11 @@ exports.getDirectors = async (req, res) => {
   }
 };
 
-exports.updateDirector = async(reqres)=>{
-  try{
-    const{id} = req.params
-    const { nom,prenom,email,password,tel,CIN} = req.body;
-    const director = await UserModel.findById(id)
+exports.updateDirector = async (reqres) => {
+  try {
+    const { id } = req.params;
+    const { nom, prenom, email, password, tel, CIN } = req.body;
+    const director = await UserModel.findById(id);
 
     director.nom = nom || director.nom;
     director.prenom = prenom || director.prenom;
