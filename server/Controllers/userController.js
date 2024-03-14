@@ -2,7 +2,7 @@ const UserModel = require("../models/Utilisateur");
 const jwt = require("jsonwebtoken");
 const jwtSecret =
   "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+";
-
+const bcrypt = require("bcrypt");
 exports.register = (req, res) => {
   const { email, password } = req.body;
   UserModel.findOne({ email: email }).then((user) => {
@@ -42,6 +42,7 @@ exports.login = (req, res) => {
               res.json({ user, token });
             }
           );
+         
         } else {
           // Passwords do not match
           res.json("Mot de passe erroné");

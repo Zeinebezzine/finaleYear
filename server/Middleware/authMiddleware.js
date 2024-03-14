@@ -1,15 +1,24 @@
 const jwt = require("jsonwebtoken");
+const jwtSecret =
+  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+";
 
 exports.authMiddleware = async (req, res, next) => {
-  const token = req.header("auth-token");
+  const token = req.header("Authorization");
+
   try {
     if (!token) {
       return res.status(401).json({ message: "You are not authorized" });
     }
-    const verifiedToken = await jwt.verify(token, "jwtSecret");
+
+    // Extract token from the "Bearer <token>" format
+    const extractedToken = token.split(" ")[1];
+
+    const verifiedToken = jwt.verify(extractedToken, jwtSecret);
+
     if (!verifiedToken) {
       return res.status(401).json({ message: "Invalid token" });
     }
+
     req.user = verifiedToken;
     next();
   } catch (error) {
