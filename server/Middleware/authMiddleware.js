@@ -1,6 +1,6 @@
 const jwt = require("jsonwebtoken");
 const jwtSecret =
-  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+";
+  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!";
 
 exports.authMiddleware = async (req, res, next) => {
   const token = req.header("Authorization");
@@ -17,6 +17,14 @@ exports.authMiddleware = async (req, res, next) => {
 
     if (!verifiedToken) {
       return res.status(401).json({ message: "Invalid token" });
+    }
+
+        // Check if the user's role allows access to the route
+    if (req.baseUrl === "/rect1" && verifiedToken.role !== "rect1") {
+      return res.status(403).json({ message: "Forbidden" });
+    }
+    if (req.baseUrl === "/directors" && verifiedToken.role !== "director") {
+      return res.status(403).json({ message: "Forbidden" });
     }
 
     req.user = verifiedToken;

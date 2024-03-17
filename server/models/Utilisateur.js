@@ -12,10 +12,10 @@ const UserSchema = new mongoose.Schema({
     required: true,
   },
   idUni: Number,
-  idEtab: {
-    type: mongoose.Schema.Types.ObjectId, //establishmentId is an object
-    ref: "etablissements", // Reference to the Establishment model
+  establishment: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Etablissement", // Reference to the Establishment model
   },
 });
-const UserModel = mongoose.model("utilisateurs", UserSchema);
+const UserModel = mongoose.model("Utilisateur", UserSchema);
 module.exports = UserModel;

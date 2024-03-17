@@ -14,7 +14,13 @@ const cookieParser = require("cookie-parser");
 const app = express();
 app.use(express.json());
 app.use(cors());
-app.use(cookieParser());
+app.use(
+  cookieParser({
+    origins: ["http://localhost:3000"],
+    methods: ["GET", "POST"],
+    credentials:true
+  })
+);
 app.use(express.urlencoded({ extended: false }));
 
 mongoose.connect("mongodb://127.0.0.1:27017/pfe");
@@ -28,27 +34,12 @@ app.get(
   etablissementController.getEstablishment
 );
 app.get("/etablissement", universityController.getEstablishmentsForUniversity);
-app.post(
-  "/Rect1/directors",
-  middleware.authMiddleware,
-  directorController.ajoutDirecteur
-);
+app.post("/Rect1/directors", middleware.authMiddleware,directorController.ajoutDirecteur);
 app.get("/Rect1/directors", directorController.getDirectors);
-app.put(
-  "/directors/:id",
-  middleware.authMiddleware,
-  directorController.updateDirector
-);
-app.post(
-  "/pedagogique",
-  middleware.authMiddleware,
-  pedagogiqueController.ajoutPedagogique
-);
-app.post(
-  "/financier",
-  middleware.authMiddleware,
-  financierController.ajoutFinancier
-);
+app.put("/directors/:id", directorController.updateDirector);
+app.post("/pedagogique", pedagogiqueController.ajoutPedagogique);
+app.post("/financier", financierController.ajoutFinancier);
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+//middleware.authMiddleware,

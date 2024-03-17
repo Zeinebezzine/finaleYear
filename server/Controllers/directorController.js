@@ -1,13 +1,21 @@
 const UserModel = require("../models/Utilisateur");
+const EtablissementModel = require("../models/Etablissement");
 
+//ajout directeur
 exports.ajoutDirecteur = async (req, res) => {
   try {
-    const { nom, prenom, email, password, tel, CIN, idEtab } = req.body;
+    const { nom, prenom, email, password, tel, CIN, establishmentName } =
+      req.body;
     const role = "directeur";
 
     const directeurExist = await UserModel.findOne({ email });
     if (directeurExist) {
       return res.status(409).json({ message: "Directeur existe deja" });
+    }
+    // Find the establishment by its name
+    const establishment = await EtablissementModel.findOne({ nom: nom });
+    if (!establishment) {
+      return res.status(404).json({ message: "Établissement non trouvé" });
     }
 
     const newDirector = new UserModel({
@@ -18,9 +26,15 @@ exports.ajoutDirecteur = async (req, res) => {
       password,
       role,
       CIN,
-      idEtab,
+      establishment: establishment._id,
     });
-
+    // Update user record with establishment ObjectId
+    // await UserModel.findOneAndUpdate(
+    //   { email: email },
+    //   { establishment: establishment._id }
+    // );
+    console.log("Establishment ID:", establishment);
+    console.log("Establishment Name:", nom);
     await newDirector.save();
     res.status(201).json({ message: "Directeur ajouté avec succès" });
   } catch (error) {
@@ -29,7 +43,9 @@ exports.ajoutDirecteur = async (req, res) => {
   }
 };
 
+//afficher
 exports.getDirectors = async (req, res) => {
+  const id = req.params.id;
   try {
     const directors = await UserModel.find({ role: "directeur" });
     res.json(directors);
@@ -39,23 +55,20 @@ exports.getDirectors = async (req, res) => {
   }
 };
 
-exports.updateDirector = async (reqres) => {
+
+exports.updateDirector = async (req, res) => {
   try {
-    const { id } = req.params;
-    const { nom, prenom, email, password, tel, CIN } = req.body;
-    const director = await UserModel.findById(id);
+    const directorId = req.params.id;
+    const updatedRecord = req.body;
 
-    director.nom = nom || director.nom;
-    director.prenom = prenom || director.prenom;
-    director.email = email || director.email;
-    director.tel = tel || director.tel;
-    director.password = password || director.password;
-    director.CIN = CIN || director.CIN;
-
-    await director.save();
-    res.json({ message: "Director updated successfully", director });
+    const updatedDirector = await UserModel.findByIdAndUpdate(
+      directorId,
+      updatedRecord,
+      { new: true }
+    );
+    res.json(updatedDirector);
   } catch (error) {
     console.error("Error updating director:", error);
-    res.status(500).json({ message: "Error updating director" });
+    res.status(500).json({ error: "Internal Server Error" });
   }
 };

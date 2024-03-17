@@ -1,7 +1,7 @@
 const UserModel = require("../models/Utilisateur");
 const jwt = require("jsonwebtoken");
 const jwtSecret =
-  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+";
+  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!";
 const bcrypt = require("bcrypt");
 exports.register = (req, res) => {
   const { email, password } = req.body;
@@ -22,11 +22,11 @@ exports.login = (req, res) => {
     .then((user) => {
       if (user) {
         if (user.password === password) {
-          jwt.sign(
+          const token = jwt.sign(
             {
               email: user.email,
-              id: user._id,
-              name: user.name,
+               id: user._id,
+              name: user.nom,
               role: user.role,
             },
             jwtSecret,
@@ -42,7 +42,7 @@ exports.login = (req, res) => {
               res.json({ user, token });
             }
           );
-         
+          res.cookie("token", token);
         } else {
           // Passwords do not match
           res.json("Mot de passe erroné");
