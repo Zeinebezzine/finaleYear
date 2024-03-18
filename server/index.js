@@ -18,7 +18,7 @@ app.use(
   cookieParser({
     origins: ["http://localhost:3000"],
     methods: ["GET", "POST"],
-    credentials:true
+    credentials: true,
   })
 );
 app.use(express.urlencoded({ extended: false }));
@@ -33,8 +33,15 @@ app.get(
   "/establishments/:universityId",
   etablissementController.getEstablishment
 );
-app.get("/etablissement", universityController.getEstablishmentsForUniversity);
-app.post("/Rect1/directors", middleware.authMiddleware,directorController.ajoutDirecteur);
+app.get(
+  "/etablissement",
+  etablissementController.getEstablishment
+);
+app.post(
+  "/Rect1/directors",
+  middleware.authMiddleware,
+  directorController.ajoutDirecteur
+);
 app.get("/Rect1/directors", directorController.getDirectors);
 app.put("/directors/:id", directorController.updateDirector);
 app.post("/pedagogique", pedagogiqueController.ajoutPedagogique);

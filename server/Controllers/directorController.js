@@ -4,17 +4,17 @@ const EtablissementModel = require("../models/Etablissement");
 //ajout directeur
 exports.ajoutDirecteur = async (req, res) => {
   try {
-    const { nom, prenom, email, password, tel, CIN, establishmentName } =
-      req.body;
+    const { nom, prenom, email, password, tel, CIN, establishment } = req.body; // Change 'establishment' to 'establishmentId'
     const role = "directeur";
 
     const directeurExist = await UserModel.findOne({ email });
     if (directeurExist) {
-      return res.status(409).json({ message: "Directeur existe deja" });
+      return res.status(409).json({ message: "Directeur existe déjà" });
     }
-    // Find the establishment by its name
-    const establishment = await EtablissementModel.findOne({ nom: nom });
-    if (!establishment) {
+
+    // Find the establishment by its ObjectId
+    const foundEstablishment = await EtablissementModel.findById(establishment._id);
+    if (!foundEstablishment) {
       return res.status(404).json({ message: "Établissement non trouvé" });
     }
 
@@ -26,19 +26,14 @@ exports.ajoutDirecteur = async (req, res) => {
       password,
       role,
       CIN,
-      establishment: establishment._id,
+      establishmentId: foundEstablishment._id,
+      establishmentName: foundEstablishment.nom,
     });
-    // Update user record with establishment ObjectId
-    // await UserModel.findOneAndUpdate(
-    //   { email: email },
-    //   { establishment: establishment._id }
-    // );
-    console.log("Establishment ID:", establishment);
-    console.log("Establishment Name:", nom);
+
     await newDirector.save();
     res.status(201).json({ message: "Directeur ajouté avec succès" });
   } catch (error) {
-    console.error("erreur d'ajout", error);
+    console.error("Erreur d'ajout:", error);
     res.status(500).json({ message: "Erreur d'ajout" });
   }
 };
@@ -54,7 +49,6 @@ exports.getDirectors = async (req, res) => {
     res.status(500).json({ message: "Error fetching directors" });
   }
 };
-
 
 exports.updateDirector = async (req, res) => {
   try {

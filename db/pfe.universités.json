@@ -1,0 +1,1497 @@
+[{
+  "_id": {
+    "$oid": "65ca28e9036cbf67a02b7f9e"
+  },
+  "id": "1",
+  "nom": "Université de Tunis",
+  "Etablissement": [
+    {
+      "id": "1",
+      "nom": "Faculté des Sciences Humaines et Sociales de Tunis"
+    },
+    {
+      "id": "2",
+      "nom": "École Supérieure des Sciences et Techniques de Tunis"
+    },
+    {
+      "id": "3",
+      "nom": "Ecole Normale Supérieure"
+    },
+    {
+      "id": "4",
+      "nom": "École Nationale Supérieure d'Ingénieurs de Tunis"
+    },
+    {
+      "id": "5",
+      "nom": "Institut Préparatoire aux Etudes d'Ingénieurs de Tunis"
+    },
+    {
+      "id": "6",
+      "nom": "Institut Préparatoire aux Etudes Littéraires et de Sciences Humaines de Tunis"
+    },
+    {
+      "id": "7",
+      "nom": "Institut Supérieur de Gestion de Tunis"
+    },
+    {
+      "id": "8",
+      "nom": "Institut Supérieur des Beaux Arts de Tunis"
+    },
+    {
+      "id": "9",
+      "nom": "Institut Supérieur d'Art Dramatique"
+    },
+    {
+      "id": "10",
+      "nom": "Institut Supérieur de Musique de Tunis"
+    },
+    {
+      "id": "11",
+      "nom": "Institut Supérieur des Sciences Culturelles et Métiers du Patrimoine de Tunis"
+    },
+    {
+      "id": "12",
+      "nom": "Institut Supérieur des Etudes Appliquées en Humanités de Tunis"
+    },
+    {
+      "id": "11",
+      "nom": "Institut Supérieur de l'Animation pour la Jeunesse et la Culture"
+    },
+    {
+      "id": "12",
+      "nom": "Institut Supérieur des ةtudes Appliquées en Humanités de Zaghouan"
+    },
+    {
+      "id": "13",
+      "nom": "Institut National du Patrimoine"
+    },
+    {
+      "id": "14",
+      "nom": "Tunis Business School"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65ca2952036cbf67a02b7f9f"
+  },
+  "id": "2",
+  "nom": "Université Ez-Zitouna",
+  "Etablissement": [
+    {
+      "id": "1",
+      "nom": "Institut Supérieur de Civilisation Islamique de Tunis",
+      "tel": [
+        "71 575 870",
+        "71 575 514"
+      ],
+      "fax": "71 576 555",
+      "Email": "isthtunis@yahoo.fr"
+    },
+    {
+      "id": "2",
+      "nom": "Institut Supérieur de Théologie de Tunis",
+      "tel": [
+        "71 569 233",
+        "71 569 237"
+      ],
+      "fax": "71 574 575",
+      "Email": "iscitunis@yahoo.fr"
+    },
+    {
+      "id": "3",
+      "nom": "Centre de Études Islamiques de Kairouan",
+      "tel": [
+        "77 284 844",
+        "77 282 669"
+      ],
+      "fax": [
+        "77 282 669",
+        "77 284 844"
+      ],
+      "Email": "kairouan@ceik.rnu.tn"
+    },
+    {
+      "id": "4",
+      "nom": "Institut Supérieur des Sciences Islamiques de Kairouan",
+      "tel": [
+        "77277724"
+      ],
+      "fax": "",
+      "Email": ""
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65ca2974036cbf67a02b7fa0"
+  },
+  "id": "3",
+  "nom": "Université de Tunis El Manar",
+  "Etablissement": [
+    {
+      "nom": "Faculté de Droit et des Sciences Politiques de Tunis",
+      "tel": [
+        "71 871 828",
+        "71 870 420",
+        "71 870 772"
+      ],
+      "fax": "71 872 617",
+      "Email": "decanat@fdspt.utm.tn"
+    },
+    {
+      "nom": "Faculté des Sciences Economique et de Gestion de Tunis",
+      "tel": [
+        "71 872 222",
+        "71 874 121"
+      ],
+      "fax": "71 872 104",
+      "Email": "contact@fsegt.rnu.tn"
+    },
+    {
+      "nom": "Faculté des sciences de tunis",
+      "tel": [
+        "71 872 600",
+        "71 872 020"
+      ],
+      "fax": [
+        "71 871 666",
+        "71 883 723"
+      ],
+      "Email": "webmaster@fst.rnu.tn"
+    },
+    {
+      "nom": "Faculté de Médecine de Tunis",
+      "tel": [
+        "71 563 709",
+        "71 563 710"
+      ],
+      "fax": "71 569 427",
+      "Email": "siteweb.fmt@gmail.com"
+    },
+    {
+      "nom": "École Nationale d'Ingénieurs de Tunis",
+      "tel": [
+        "71 874 700"
+      ],
+      "fax": [
+        "71 872 729",
+        "71 871 006"
+      ],
+      "Email": "enit@enit.rnu.tn"
+    },
+    {
+      "nom": "Institut Bourguiba des Langues Vivantes",
+      "tel": [
+        "71 835 885",
+        "71 832 923"
+      ],
+      "fax": "71 833 684",
+      "Email": "iblv@iblv.rnu.tn"
+    },
+    {
+      "nom": "Institut Préparatoire aux Etudes d'Ingénieurs d'El Manar",
+      "tel": [
+        "71 874 688",
+        "71 874 544"
+      ],
+      "fax": "71 873 948",
+      "Email": "ipeiem@ipeiem.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur des Sciences Biologiques Appliquées",
+      "tel": [
+        "71 573 721"
+      ],
+      "fax": "71 573 526",
+      "Email": ""
+    },
+    {
+      "nom": "Institut Supérieur d'Informatique d'El Manar",
+      "tel": [
+        "71 706 317",
+        "71 706 164"
+      ],
+      "fax": "71 706 698",
+      "Email": "isi@isi.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur des Sciences Humaines de Tunis",
+      "tel": [
+        "71 561 439",
+        "71 569 499"
+      ],
+      "fax": "71 571 911",
+      "Email": "issht.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur des Technologies Médicales",
+      "tel": [
+        "71 260 400",
+        "71 260 425"
+      ],
+      "fax": "71 260 426",
+      "Email": "istmt@istmt.rnu.tn"
+    },
+    {
+      "nom": "École Supérieure des Sciences et Techniques de la Santé de Tunis",
+      "tel": [
+        "71 562 455"
+      ],
+      "fax": "71 566 722",
+      "Email": "contact@esstst.utm.tn"
+    },
+    {
+      "nom": "Institut Supérieur des Sciences infirmières de Tunis",
+      "tel": [
+        "71 564 43"
+      ],
+      "fax": "71 560 166",
+      "Email": "moez.trabelsi@rns.tn"
+    },
+    {
+      "nom": "Institut Pasteur",
+      "tel": [
+        "71 841 203",
+        "71 843 755"
+      ],
+      "fax": "71 791 833",
+      "Email": "contact@pasteur.rns.tn"
+    },
+    {
+      "nom": "Institut de Recherche Vétérinaire de Tunis",
+      "tel": [
+        "71 564 321"
+      ],
+      "fax": "71 569 692",
+      "Email": "irvtunis@iresa.agrinet.tn"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65ca298d036cbf67a02b7fa1"
+  },
+  "id": "4",
+  "nom": "Université Virtuelle",
+  "Etablissement": [
+    {
+      "nom": "Institut Supérieur de l'Education et de la Formation Continue",
+      "tel": [
+        "71 588 233",
+        "71 870 420"
+      ],
+      "fax": "71 872 617",
+      "Email": "decanat@fdspt.utm.tn"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65ca29a0036cbf67a02b7fa2"
+  },
+  "id": "5",
+  "nom": "Université de Carthage",
+  "Etablissement": [
+    {
+      "nom": "Faculté des Sciences Juridiques, Politiques et Sociales de Tunis",
+      "tel": [
+        "71 766 919",
+        "71 573 892"
+      ],
+      "fax": [
+        "71 717 255",
+        "71 702 882"
+      ],
+      "Email": "contact@fsjps.rnu.tn"
+    },
+    {
+      "nom": "Faculté des Sciences de Bizerte",
+      "tel": [
+        "71 766 919",
+        "71 573 892"
+      ],
+      "fax": [
+        "71 717 255",
+        "71 702 882"
+      ],
+      "Email": "fsb@fsb.rnu.tn"
+    },
+    {
+      "nom": "Faculté des Sciences Economiques et de Gestion de Nabeul",
+      "tel": [
+        "72 232 205",
+        "72 232 133"
+      ],
+      "fax": "72 232 318",
+      "Email": "fsegn@fsegn.rnu.tn"
+    },
+    {
+      "nom": "École Nationale d'Architecture et d'Urbanisme de Tunis",
+      "tel": [
+        "71 729 197",
+        "71 729 263"
+      ],
+      "fax": "71 729 264",
+      "Email": "enau@enau.rnu.tn"
+    },
+    {
+      "nom": "École Polytechnique de Tunisie",
+      "tel": [
+        "71 774 611",
+        "71 774 699"
+      ],
+      "fax": "71 748 843",
+      "Email": ""
+    },
+    {
+      "nom": "École Nationale d’Ingénieurs de Carthage",
+      "tel": [
+        "71 940 699",
+        "71 940 775"
+      ],
+      "fax": "71 941 579",
+      "Email": "enicarthage@enicarthage.rnu.tn"
+    },
+    {
+      "nom": "École Supérieure des Statistiques et d'Analyse de l'Information",
+      "tel": "70 839 440",
+      "fax": "70 838 170",
+      "Email": "webmasteressai@gmail.com"
+    },
+    {
+      "nom": "École Supérieure de l'Audiovisuel et du Cinéma de Gammarth",
+      "tel": "71 981 441",
+      "fax": "71 981 288",
+      "Email": "esac@gmail.com"
+    },
+    {
+      "nom": "Institut Préparatoire aux Etudes d'Ingénieur de Bizerte",
+      "tel": "72 593 450",
+      "fax": "72 593 265",
+      "Email": "ipeib@ipeib.rnu.tn"
+    },
+    {
+      "nom": "Institut des Hautes Etudes Commerciales de Carthage",
+      "tel": [
+        "71 774 720",
+        "71 775 948"
+      ],
+      "fax": "71 775 944",
+      "Email": ""
+    },
+    {
+      "nom": "Institut National des Sciences Appliquées et de Technologie",
+      "tel": [
+        "71 703 746",
+        "71 703 829"
+      ],
+      "fax": [
+        "71 704 329",
+        "71 708 559"
+      ],
+      "Email": "insat@insat.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur des Sciences Appliquées et de la Technologie de Mateur",
+      "tel": [
+        "72 485 481",
+        "72 486 733"
+      ],
+      "fax": "72 486 044",
+      "Email": "issatm@issatm.rnu.tn"
+    },
+    {
+      "nom": "Institut Préparatoire aux Etudes d'Ingénieur Nabeul",
+      "tel": [
+        "72 220 091",
+        "72 220 053"
+      ],
+      "fax": "72 220 181",
+      "Email": "ipein@ipein.rnu.tn"
+    },
+    {
+      "nom": "Institut Préparatoire aux Etudes Scientifiques et Techniques de la Marsa",
+      "tel": [
+        "71 740 048",
+        "71 741 964"
+      ],
+      "fax": "71 746 551",
+      "Email": ""
+    },
+    {
+      "nom": "Institut Supérieur des Beaux Arts de Nabeul",
+      "tel": "72 232 210",
+      "fax": "72 232 144",
+      "Email": "isban@isban.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur des Technologies de l'Environnement, de L'Urbanisme et du Bâtiment",
+      "tel": "71 940 812",
+      "fax": "71 941 255",
+      "Email": ""
+    },
+    {
+      "nom": "Institut Supérieur des Langues de Tunis",
+      "tel": [
+        "71 771 355",
+        "71 772 460"
+      ],
+      "fax": "71 770 134",
+      "Email": "email@islt.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur des Langues Appliquées et d'Informatique de Nabeul",
+      "tel": [
+        "72 230 551",
+        "71 236 143"
+      ],
+      "fax": "72 231 739",
+      "Email": "info@isln.rnu.tn"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65ca29b5036cbf67a02b7fa3"
+  },
+  "id": "6",
+  "nom": "Université de Gafsa",
+  "Etablissement": [
+    {
+      "nom": "Faculté des Sciences de Gafsa",
+      "tel": [
+        "76 211 701",
+        "76 211 024"
+      ],
+      "fax": "76 211 026",
+      "Email": "webmasterfsgf@gmail.com"
+    },
+    {
+      "nom": "Institut Supérieur des Etudes Appliquées en Humanités de Gafsa",
+      "tel": "76 224 328",
+      "fax": "76 452 230",
+      "Email": "webmaster@iseahgf.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur d 'Administration des Entreprises de Gafsa",
+      "tel": "76 211 440",
+      "fax": "76 211 450",
+      "Email": "webmaster@iseag.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur des Sciences Appliquées et de Technologie de Gafsa",
+      "tel": "76 211 515",
+      "fax": "76 211 515",
+      "Email": ""
+    },
+    {
+      "nom": "Institut Supérieur dArts et Métiers de Gafsa",
+      "tel": "76 211 107",
+      "fax": "76 211 108",
+      "Email": "contact@isamgf.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur des Sciences et des Technologies de l’énergie de Gafsa",
+      "tel": "76 211 622",
+      "fax": "76 210 592",
+      "Email": ""
+    },
+    {
+      "nom": "Institut Supérieur des Etudes Appliquées en Humanités de Tozeur",
+      "tel": "76 452 223",
+      "fax": "76 452 230",
+      "Email": ""
+    },
+    {
+      "nom": "Institut Préparatoire aux Etudes d’Ingénieur de Gafsa",
+      "tel": "76 210 043",
+      "fax": "76 210 045",
+      "Email": "ipeig@ipeig.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur du Sport et de l’Education Physique de Gafsa",
+      "tel": [
+        "76 211 612",
+        "76 211 613"
+      ],
+      "fax": "76 211 616",
+      "Email": ""
+    },
+    {
+      "nom": "École Nationale d'Ingénieurs de Gafsa",
+      "tel": [
+        "76 210 673",
+        "76 210 672"
+      ],
+      "fax": "76 210 666",
+      "Email": "eniga@eniga.rnu.tn"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65ca29c6036cbf67a02b7fa4"
+  },
+  "id": 7,
+  "nom": "Université de Sousse",
+  "Etablissement": [
+    {
+      "nom": "Faculté de Droit et des Sciences Politiques de Sousse",
+      "tel": [
+        "73 234 426",
+        "73 235 711"
+      ],
+      "fax": [
+        "73 234 477",
+        "73 232 869"
+      ],
+      "Email": ""
+    },
+    {
+      "nom": "Faculté de Médecine de Sousse",
+      "tel": [
+        "73 226 611",
+        "73 222 600"
+      ],
+      "fax": "73 224 899",
+      "Email": ""
+    },
+    {
+      "nom": "Faculté des Lettres et des Sciences Humaines de Sousse",
+      "tel": [
+        "73 301 800",
+        "73 301 902"
+      ],
+      "fax": [
+        "73 301 903",
+        "73 302 133"
+      ],
+      "Email": "flsh.sousse@fls.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur de Finance et de Fiscalité de Sousse",
+      "tel": "73 222 700",
+      "fax": "73 222 701",
+      "Email": "isffs@isffs.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur d'Informatique et des Technologies de Communication de Hammam Sousse",
+      "tel": "73 371 571",
+      "fax": "73 364 411",
+      "Email": "administration@infcom.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur du Transport et de la Logistique de Sousse",
+      "tel": [
+        "73 226 365",
+        "73 226 211"
+      ],
+      "fax": "73 226 211",
+      "Email": "istls@istls.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur de Beaux Arts de Sousse",
+      "tel": [
+        "73 214 333",
+        "73 214 334"
+      ],
+      "fax": "73 214 334",
+      "Email": "isbas@isbas.rnu.tn"
+    },
+    {
+      "nom": "École Supérieure des Sciences et Techniques de la Santé de Sousse",
+      "tel": "73 369 307",
+      "fax": "73 369 308",
+      "Email": "contact@esstssousse.com"
+    },
+    {
+      "nom": "Institut Supérieur de Gestion de Sousse",
+      "tel": [
+        "73 332 976",
+        "73 332 977"
+      ],
+      "fax": "73 332 978",
+      "Email": "isgs@isgs.rnu.tn"
+    },
+    {
+      "nom": "Institut des Hautes Etudes Commerciales de Sousse",
+      "tel": [
+        "73 368 351",
+        "73 368 358"
+      ],
+      "fax": "73 368 350",
+      "Email": "ihecso@ihesco.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur de Musique de Sousse",
+      "tel": [
+        "73 239 553",
+        "73 239 554"
+      ],
+      "fax": "73 239 555",
+      "Email": ""
+    },
+    {
+      "nom": "Institut Supérieur des Sciences Appliquées et de Technologie de Sousse",
+      "tel": "73 382 656",
+      "fax": "73 332 658",
+      "Email": "issats@issatso.rnu.tn"
+    },
+    {
+      "nom": "École Nationale d’Ingénieurs de Sousse",
+      "tel": [
+        "73 369 500",
+        "73 369 501",
+        "73 569 502"
+      ],
+      "fax": "73 369 506",
+      "Email": "Direction.eniso@eniso.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur Agronomique de Chott Mériem",
+      "tel": [
+        "73 327 542",
+        "73 327 534",
+        "73 327 544",
+        "73 327 546"
+      ],
+      "fax": "73 327 591",
+      "Email": "isa.chottmeriem@iresa.agrinet.tn"
+    },
+    {
+      "nom": "Institut Supérieur des Sciences infirmières de Sousse",
+      "tel": "73 237 811",
+      "fax": "73 237 911",
+      "Email": ""
+    },
+    {
+      "nom": "École Supérieure des Sciences et des technologies de Hammam Sousse",
+      "tel": [
+        "73 370 712",
+        "73 370 830"
+      ],
+      "fax": "73 330 710",
+      "Email": "essths@essths.rnu.tn"
+    },
+    {
+      "nom": "Faculté des Sciences Economique et de Gestion de Sousse",
+      "tel": "73 30 18 08",
+      "fax": "73 23 44 77",
+      "Email": "fsegsousse@fsegsousse.rnu.tn"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65ca2a03036cbf67a02b7fa5"
+  },
+  "id": "8",
+  "nom": "Université de Sfax",
+  "Etablissement": [
+    {
+      "nom": "Faculté des Sciences Economiques et de Gestion de Sfax",
+      "tel": [
+        "74 278 879",
+        "74 279 710"
+      ],
+      "fax": "74 279 139",
+      "Email": "contact@fsegs.rnu.tn"
+    },
+    {
+      "nom": "Faculté de Médecine de Sfax",
+      "tel": "74 241 888",
+      "fax": "74 246 217",
+      "Email": "administrationfms@medecinesfax.org"
+    },
+    {
+      "nom": "Faculté de droit de Sfax",
+      "tel": [
+        "74 272 445",
+        "74 272 301"
+      ],
+      "fax": "74 272 245",
+      "Email": "fdsf@fdsf.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur des Arts et Métiers de Sfax",
+      "tel": [
+        "74 299 593",
+        "74 299 511"
+      ],
+      "fax": "74 297 286",
+      "Email": "admin.isams@isams.rnu.tn"
+    },
+    {
+      "nom": "École Nationale d'Electronique et des Télécommunications de Sfax",
+      "tel": [
+        "74 863 047",
+        "74 862 500"
+      ],
+      "fax": "74 863 037",
+      "Email": "contact@enetcom.usf.tn"
+    },
+    {
+      "nom": "Institut Supérieur de Gestion Industrielle de Sfax",
+      "tel": "74 863 090",
+      "fax": "74 863 092",
+      "Email": "isgis@isgis.rnu.tn"
+    },
+    {
+      "nom": "Institut des Hautes Etudes Commerciales de Sfax",
+      "tel": [
+        "74 879 085",
+        "74 272 970"
+      ],
+      "fax": "74 879 084",
+      "Email": "ihecsf@ihecsf.rnu.tn"
+    },
+    {
+      "nom": "Faculté des Sciences de Sfax",
+      "tel": [
+        "74 275 541",
+        "74 276 596"
+      ],
+      "fax": "74 274 437",
+      "Email": ""
+    },
+    {
+      "nom": "École Nationale d'Ingénieurs de Sfax",
+      "tel": "74 274 088",
+      "fax": "74 274 088",
+      "Email": "enis@enis.rnu.tn"
+    },
+    {
+      "nom": "École Supérieure de Commerce de Sfax",
+      "tel": [
+        "74 278 870",
+        "74 279 410"
+      ],
+      "fax": "74 278 630",
+      "Email": "escs@escs.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur d'Administration des Affaires de Sfax",
+      "tel": "74 680 460",
+      "fax": "74 680 450",
+      "Email": "isaas@isaas.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur d'Informatique et de Multimédia de Sfax",
+      "tel": [
+        "74 452 632",
+        "74 242 870"
+      ],
+      "fax": "74 242 870",
+      "Email": "contact@isimsf.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur de Musique de Sfax",
+      "tel": [
+        "74 225 545",
+        "74 220 610"
+      ],
+      "fax": "74 229 683",
+      "Email": "contact@institutmusiquesfax.com"
+    },
+    {
+      "nom": "Institut Préparatoire aux Etudes d'Ingénieurs de Sfax",
+      "tel": [
+        "74 241 733",
+        "74 241 223"
+      ],
+      "fax": "74 246 347",
+      "Email": ""
+    },
+    {
+      "nom": "Institut Supérieur du Sport et de l'Education Physique de Sfax",
+      "tel": [
+        "74 278 505",
+        "74 278 504"
+      ],
+      "fax": "74 278 502",
+      "Email": "issep.sfax@issepsf.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur de Biotechnologies de Sfax",
+      "tel": [
+        "74 674 364",
+        "74 674 354"
+      ],
+      "fax": "74 674 364",
+      "Email": "isbs@isbs.rnu.tn"
+    },
+    {
+      "nom": "Faculté des Lettres et Sciences Humaines de Sfax",
+      "tel": [
+        "74 670 556",
+        "74 670 557"
+      ],
+      "fax": "74 670 540",
+      "Email": "flshs@flshs.rnu.tn"
+    },
+    {
+      "nom": "Institut Zitouna de Sfax",
+      "tel": [
+        "74 241 589",
+        "74 241 240"
+      ],
+      "fax": "74 241 033",
+      "Email": "contact@isosfax.agrinet.tn"
+    },
+    {
+      "nom": "École Supérieure des Sciences et Techniques de la Santé de Sfax",
+      "tel": [
+        "74 465 700",
+        "74 465 701",
+        "74 465 702",
+        "74 465 703"
+      ],
+      "fax": "74 278 562",
+      "Email": "ecosuptechsante.sfax@rns.tn"
+    },
+    {
+      "nom": "Institut Supérieur des Sciences infirmières de Sfax",
+      "tel": [
+        "74 465 501",
+        "74 465 502",
+        "74 465 503",
+        "74 465 504"
+      ],
+      "fax": "74 462 750",
+      "Email": ""
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65ca2a22036cbf67a02b7fa6"
+  },
+  "id": "9",
+  "nom": "Université de Jendouba",
+  "Etablissement": [
+    {
+      "nom": "Faculté des Sciences Juridiques, Economiques et de Gestion de Jendouba",
+      "tel": [
+        "78 600 299",
+        "78 600 300"
+      ],
+      "fax": "78 601 176",
+      "Email": "fsjegj@fsjegj.rnu.tn",
+      "Site web": "www.fsjegj.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur des Etudes Appliquées en Humanités du Kef",
+      "tel": [
+        "78 204 963",
+        "78 204 964"
+      ],
+      "fax": "78 201 679",
+      "Email": "iseah.RF2013@iseahkf.rnu.tn",
+      "Site web": "www.iseahkf.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur des Langues Appliquées et d'Informatique de Béja",
+      "tel": [
+        "78 441 744",
+        "78 440 695"
+      ],
+      "fax": "78 441 744",
+      "Email": "ISLAIB@islaib.rnu.tn",
+      "Site web": "www.islaib.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur des Sciences Humaines de Jendouba",
+      "tel": "78 610 202",
+      "fax": "78 610 200",
+      "Email": "isshjendouba@yahoo.fr",
+      "Site web": "www.isshj.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur des Arts et Métiers de Siliana",
+      "tel": "78 874 445",
+      "fax": "78 874 445",
+      "Email": "",
+      "Site web": "www.isamsl.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur de Musique et de Théâtre du Kef",
+      "tel": "78 204 078",
+      "fax": "78 200 035",
+      "Email": "",
+      "Site web": "www.istmk.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur de l 'Education Physique du Kef",
+      "tel": "78 238 036",
+      "fax": "78 238 037",
+      "Email": "",
+      "Site web": ""
+    },
+    {
+      "nom": "École Supérieure d 'Agriculture du Kef",
+      "tel": [
+        "78 238 238",
+        "78 238 138"
+      ],
+      "fax": "78 238 338",
+      "Email": "esak@iresa.agrinet.tn",
+      "Site web": "www.esakef.agrinet.tn"
+    },
+    {
+      "nom": "Institut Sylvo-Pastoral de Tabarka",
+      "tel": [
+        "78 672 542",
+        "78 672 467"
+      ],
+      "fax": "78 672 171",
+      "Email": "isptabarka@iresa.agrinet.tn",
+      "Site web": "www.isptabarka.agrinet.tn"
+    },
+    {
+      "nom": "École Supérieure des Ingénieurs de l'Equipement Rural de Medjez El Bab",
+      "tel": "78 562 450",
+      "fax": "78 562 300",
+      "Email": "esier@iresa.agrinet.tn",
+      "Site web": "www.esier.agrinet.tn"
+    },
+    {
+      "nom": "Institut supérieur de l'informatique du Kef",
+      "tel": "78 201 056",
+      "fax": "78 200 237",
+      "Email": "",
+      "Site web": "www.isikef.rnu.tn"
+    },
+    {
+      "nom": "Institut supérieur de biotechnologie de Béja",
+      "tel": "78 443 863",
+      "fax": "78 459 098",
+      "Email": "isbb@isbb.rnu.tn",
+      "Site web": "www.isbb.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur des Sciences infirmières du Kef",
+      "tel": "78 226 070",
+      "fax": "78 226 070",
+      "Email": "",
+      "Site web": "www.issikf.rnu.tn"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65ca2a33036cbf67a02b7fa7"
+  },
+  "id": "10",
+  "nom": "Université de la Manouba",
+  "Etablissement": [
+    {
+      "nom": "Faculté des Lettres, des Arts et des Humanités de la Manouba",
+      "tel": [
+        "71 601 391",
+        "71 601 045"
+      ],
+      "fax": "71 600 910",
+      "Email": "",
+      "Site web": "www.flm.rnu.tn"
+    },
+    {
+      "nom": "École Supérieure des Sciences et Technologies du Design",
+      "tel": [
+        "70 614 931",
+        "70 614 868"
+      ],
+      "fax": "71 610 750",
+      "Email": "contact@essted.rnu.tn",
+      "Site web": "www.essted.rnu.tn"
+    },
+    {
+      "nom": "École Supérieure de Commerce de Tunis",
+      "tel": [
+        "71 600 615",
+        "71 602 975"
+      ],
+      "fax": "71 601 311",
+      "Email": "contact@esct.rnu.tn",
+      "Site web": "www.esct.rnu.tn"
+    },
+    {
+      "nom": "École Supérieure d'Economie Numérique",
+      "tel": [
+        "70 526 343",
+        "70 526 349"
+      ],
+      "fax": "70 526 385",
+      "Email": "contact@esen.tn",
+      "Site web": "www.esen.tn"
+    },
+    {
+      "nom": "École Nationale des Sciences de l'Informatique",
+      "tel": [
+        "71 600 224",
+        "71 600 444"
+      ],
+      "fax": "71 600 449",
+      "Email": "webmaster@ensi.rnu.tn",
+      "Site web": "www.ensi.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur des Arts du Multimédia de la Manouba",
+      "tel": "71 603 497",
+      "fax": "71 603 450",
+      "Email": "webmaster@isa2m.rnu.tn",
+      "Site web": "www.isa2m.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur de Comptabilité et d'Administration des Entreprises",
+      "tel": [
+        "71 601 890",
+        "71 600 705"
+      ],
+      "fax": "71 602 404",
+      "Email": "iscae@iscae.rnu.tn",
+      "Site web": "www.iscae.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur de Biotechnologie de Sidi Thabet",
+      "tel": "71 537 040",
+      "fax": "71 537 044",
+      "Email": "isbst@isbst.rnu.tn",
+      "Site web": "www.isbst.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur de Documentation de Tunis",
+      "tel": [
+        "71 600 650",
+        "71 601 850"
+      ],
+      "fax": "71 600 200",
+      "Email": "isd@isd.rnu.tn",
+      "Site web": "www.isd.rnu.tn"
+    },
+    {
+      "nom": "Institut de Presse et des Sciences de l'Information",
+      "tel": "71 600 831",
+      "fax": "71 600 465",
+      "Email": "contact@ipsi.rnu.tn",
+      "Site web": "www.ipsi.rnu.tn"
+    },
+    {
+      "nom": "École Nationale de Médecine Vétérinaire de Sidi Thabet",
+      "tel": "71 552 200",
+      "fax": "71 552 441",
+      "Email": "enmv@iresa.agrinet.tn",
+      "Site web": "www.enmv.agrinet.tn"
+    },
+    {
+      "nom": "Institut Supérieur du Sport et de l'Education Physique de Ksar Saïd",
+      "tel": [
+        "71 544 630",
+        "71 548 432"
+      ],
+      "fax": "71 654 282",
+      "Email": "",
+      "Site web": "www.issep-ks.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur de l'Education Spécialisée",
+      "tel": "70 604 124",
+      "fax": "70 604 071",
+      "Email": "direction@ises.uma.tn",
+      "Site web": "www.ises.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur de l'Histoire de la Tunisie Contemporaine",
+      "tel": [
+        "71 600 551",
+        "71 600 699"
+      ],
+      "fax": "71 600 699",
+      "Email": "ishmn@ishmn.rnu.tn",
+      "Site web": "www.ishmn.rnu.tn"
+    },
+    {
+      "nom": "École Nationale d'Ingénieurs de la Manouba (National Engineering School of Manouba)",
+      "tel": "71601315",
+      "fax": "71603449",
+      "Email": "",
+      "Site web": "https://manouba-school-engineering.web.app/"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65ca2a47036cbf67a02b7fa8"
+  },
+  "id": "11",
+  "nom": "Université de Kairouan"
+},
+{
+  "_id": {
+    "$oid": "65ca2a59036cbf67a02b7fa9"
+  },
+  "id": "12",
+  "nom": "Université de Monastir",
+  "Etablissement": [
+    {
+      "nom": "Faculté des Sciences de Monastir",
+      "tel": "73 500 276",
+      "fax": "73 500 278",
+      "Email": "fsm@fsm.rnu.tn"
+    },
+    {
+      "nom": "Faculté de Médecine de Monastir",
+      "tel": [
+        "73 460 350",
+        "73 460 302",
+        "73 460 301",
+        "73 462 200"
+      ],
+      "fax": "73 460 737",
+      "Email": "fmm@fmm.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur d'Informatique et de Mathématiques de Monastir",
+      "tel": [
+        "73 464 167",
+        "73 464 168"
+      ],
+      "fax": [
+        "73 464 288",
+        "73 425 188"
+      ],
+      "Email": "nejib.hassen@fsm.rnu.tn"
+    },
+    {
+      "nom": "Faculté de Médecine Dentaire de Monastir",
+      "tel": [
+        "73 460 832",
+        "73 461 152",
+        "73 463 200"
+      ],
+      "fax": "73 461 150",
+      "Email": "fmdm@fmdm.rnu.tn"
+    },
+    {
+      "nom": "Faculté de Pharmacie de Monastir",
+      "tel": [
+        "73 461 140",
+        "73 461 142",
+        "73 461 000"
+      ],
+      "fax": "73 461 830",
+      "Email": "faculte-pharmacie@fphm.rnu.tn"
+    },
+    {
+      "nom": "École Nationale d'Ingénieurs de Monastir",
+      "tel": [
+        "73 500 244",
+        "73 500 405",
+        "73 500 511"
+      ],
+      "fax": "73 500 41",
+      "Email": "direction@enim.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur de Biotechnologie de Monastir",
+      "tel": [
+        "73 463 716",
+        "73 463 715",
+        "73 463 711"
+      ],
+      "fax": "73 465 404",
+      "Email": "isbm@isbm.rnu.tn"
+    },
+    {
+      "nom": "Institut Préparatoire aux Etudes d'Ingénieurs de Monastir",
+      "tel": [
+        "73 500 273",
+        "73 500 277",
+        "73 501 595"
+      ],
+      "fax": "73 500 512",
+      "Email": "ipeim@ipeim.rnu.tn"
+    },
+    {
+      "nom": "École Supérieure des Sciences et Techniques de la Santé de Monastir",
+      "tel": [
+        "73 462 477",
+        "73 460 482",
+        "73 463 544"
+      ],
+      "fax": "73 464 599",
+      "Email": "esstsm@ms.tn"
+    },
+    {
+      "nom": "Faculté des Sciences Economiques et de Gestion de Mahdia",
+      "tel": [
+        "73 683 191",
+        "73 683 192",
+        "73 683 189"
+      ],
+      "fax": "73 683 190",
+      "Email": "fsegma@fsegma.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur des Etudes Appliquées en Humanités de Mahdia",
+      "tel": [
+        "73 688 510",
+        "73 588 545"
+      ],
+      "fax": "73 688 518",
+      "Email": "iseahm@iseahm.rnu.tn"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65ca2a78036cbf67a02b7fab"
+  },
+  "id": "13",
+  "nom": "Université de Gabes",
+  "Etablissement": [
+    {
+      "nom": "Faculté des Sciences de Gabès",
+      "tel": "75 392 600 / 75 392 080",
+      "fax": "75 392 421",
+      "email": "mail@fsg.rnu.tn"
+    },
+    {
+      "nom": "École Nationale d'Ingénieurs de Gabès",
+      "tel": "75 392 257 / 75 392 100",
+      "fax": "75 392 190",
+      "email": "contact@enig.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur de Gestion de Gabès",
+      "tel": "75 272 280 / 75 276 090",
+      "fax": "75 270 686",
+      "email": "isggb@isggb.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur des Langues de Gabès",
+      "tel": "75 274 244 / 75 275 344",
+      "fax": "75 274 522",
+      "email": "helmi.majdoub@gmail.com"
+    },
+    {
+      "nom": "Institut Supérieur des Arts et Métiers de Gabès",
+      "tel": "75 292 788 - 72 292 777",
+      "fax": "75 291 211",
+      "email": "info@isamgb.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur de Biologie Appliquée de Medenine",
+      "tel": "75 633 919",
+      "fax": "75 633 918",
+      "email": "isbam@isbam.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur des Etudes Juridiques de Gabès",
+      "tel": "75 390 434",
+      "fax": "75 390 466",
+      "email": "isejg@isejg.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur d 'Informatique et de Multimédia de Gabès",
+      "tel": "75 394 229",
+      "fax": "75 394 309",
+      "email": "isimg@isimg.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur des Sciences Appliquées et de Technologie de Gabès",
+      "tel": "75 392 108 / 75 392 404",
+      "fax": "75 392 390",
+      "email": "issatgb@issatgb.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur des Sciences et Techniques des Eaux de Gabès",
+      "tel": "75 395 150",
+      "fax": "75 391 929",
+      "email": "isstegb.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur des Systèmes Industriels de Gabès",
+      "tel": "75 291 788/ 75 297 973",
+      "fax": "75 297 974",
+      "email": "issig@issig.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur des Etudes Appliquées en Humanités de Médenine",
+      "tel": "75 632 788/ 75 644 595",
+      "fax": "75 643 044",
+      "email": ""
+    },
+    {
+      "nom": "Institut Supérieur d'Informatique de Medenine",
+      "tel": "75 641 716",
+      "fax": "75 648 770",
+      "email": "isim@isim.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur des Arts et Métiers de Tataouine",
+      "tel": "75 846 226",
+      "fax": "75 846 226",
+      "email": "isamt_tata@yahoo.fr"
+    },
+    {
+      "nom": "Institut Supérieur des Sciences infirmières de Gabès",
+      "tel": "75 273 266",
+      "fax": "75 273 266",
+      "email": "contact@issig.tn"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65ca2ab1036cbf67a02b7fac"
+  },
+  "id": "14",
+  "nom": "Instituts Supèrieurs des Etudes Technologiques",
+  "Etablissement": [
+    {
+      "nom": "Institut Supérieur des Etudes Technologiques de Sfax",
+      "tel": "74 431 513 / 74 431 425",
+      "fax": "74 431 386",
+      "email": "isetsf@isetsf.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur des Etudes Technologiques de Kebili",
+      "tel": "75 491 000 / 75 494 000",
+      "fax": "75 491 000",
+      "email": ""
+    },
+    {
+      "nom": "Institut Supérieur des Etudes Technologiques de Gabès",
+      "tel": "75 292 625/ 75 290 651",
+      "fax": "75 290 041",
+      "email": "isetg@isetg.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur des Etudes Technologiques de Jerba",
+      "tel": "75 733 110 / 75 733 109",
+      "fax": "75 733 111",
+      "email": "isetjb@gmail.com"
+    },
+    {
+      "nom": "Institut Supérieur des Etudes Technologiques de Kef",
+      "tel": "78 238 001/ 78 238 032",
+      "fax": "78 238 002",
+      "email": "isetkf@isetkf.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur des Etudes Technologiques de Zaghouan",
+      "tel": "72 660 700 / 72 660 400",
+      "fax": "72 660 300",
+      "email": ""
+    },
+    {
+      "nom": "Institut Supérieur des Etudes Technologiques de Sousse",
+      "tel": "73 307 960 / 73 307 961",
+      "fax": "73 307 963",
+      "email": ""
+    },
+    {
+      "nom": "Institut Supérieur des Etudes Technologiques de Mahdia",
+      "tel": "73 683 410 / 73 683 407",
+      "fax": "73 683 399",
+      "email": ""
+    },
+    {
+      "nom": "Institut Supérieur des Etudes Technologiques de Siliana",
+      "tel": "78 874 600",
+      "fax": "78 874 699",
+      "email": ""
+    },
+    {
+      "nom": "Institut Supérieur des Etudes Technologiques de Radès",
+      "tel": "71 460 100 / 71 461 125",
+      "fax": "71 442 322",
+      "email": "des_isetr@yahoo.fr"
+    },
+    {
+      "nom": "Institut Supérieur des Etudes Technologiques de Nabeul",
+      "tel": "72 220 051 / 72 220 035",
+      "fax": "72 220 033",
+      "email": "isetn@isetn.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur des Etudes Technologiques de Sidi Bouzid",
+      "tel": "76 624 800",
+      "fax": "76 632 842",
+      "email": "isetbz@isetbz.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur des Etudes Technologiques en Communications (El Ghazala)",
+      "tel": "71 857 788 / 71 857 330",
+      "fax": "71 857 555",
+      "email": "courriel@isetcom.tn"
+    },
+    {
+      "nom": "Institut Supérieur des Etudes Technologiques de Kairouan",
+      "tel": "77 323 300 / 77 323 350",
+      "fax": "77 323 320",
+      "email": ""
+    },
+    {
+      "nom": "Institut Supérieur des Etudes Technologiques de Gafsa",
+      "tel": "76 211 081 / 76 211 041",
+      "fax": "76 211 080",
+      "email": ""
+    },
+    {
+      "nom": "Institut Supérieur des Etudes Technologiques de Béja",
+      "tel": "78 443 230",
+      "fax": "78 443 283",
+      "email": ""
+    },
+    {
+      "nom": "Institut Supérieur des Etudes Technologiques de Charguia",
+      "tel": "71 940 322 / 71 940 292",
+      "fax": "71 940 370",
+      "email": "info@isetch.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur des Etudes Technologiques de Jendouba",
+      "tel": "78 610 104",
+      "fax": "78 610 102",
+      "email": "isetj@isetj.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur des Etudes Technologiques de Kasserine",
+      "tel": "77 418 000 / 77 418 033",
+      "fax": "77 418 088",
+      "email": ""
+    },
+    {
+      "nom": "Institut Supérieur des Etudes Technologiques de Ksar Hellal",
+      "tel": "73 475 907 / 73 475 900",
+      "fax": "73 475 163",
+      "email": "contact@isetkh.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur des Etudes Technologiques de Tataouine",
+      "tel": "75 844 231",
+      "fax": "75 844 526",
+      "email": "isetta@isetta.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur des Etudes Technologiques de Tozeur",
+      "tel": "76 473 777",
+      "fax": "76 472 777",
+      "email": "contact@isett.rnu.tn"
+    },
+    {
+      "nom": "Institut Supérieur des Etudes Technologiques de Bizerte",
+      "tel": "72 572 455",
+      "fax": "",
+      "email": "isetb@isetb.rnu.tn"
+    },
+    {
+      "nom": "Institut supérieur des Etudes Technologiques de Médenine",
+      "tel": "75 632 032",
+      "fax": "75 632 839",
+      "email": "isetmd@isetmd.rnu.tn"
+    }
+  ]
+}]

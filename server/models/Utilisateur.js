@@ -16,6 +16,8 @@ const UserSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "Etablissement", // Reference to the Establishment model
   },
+
+  establishmentName: String, // Add a field to store establishment name for reference
 });
 const UserModel = mongoose.model("Utilisateur", UserSchema);
 module.exports = UserModel;

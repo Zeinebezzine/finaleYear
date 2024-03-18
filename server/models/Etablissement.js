@@ -5,7 +5,7 @@ const EtablissementSchema = new mongoose.Schema({
   tel: [String],
   fax: [String],
   email: String,
-  // idUni: { type: String, unique: true },
+  idUni: { type: String, unique: true },
 });
 
 const EtablissementModel = mongoose.model("Etablissement", EtablissementSchema);

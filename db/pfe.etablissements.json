@@ -1,0 +1,278 @@
+[{
+  "_id": {
+    "$oid": "65f0b50699be684b1e7e0265"
+  },
+  "nom": "Faculté de Droit et des Sciences Politiques de Sousse",
+  "tel": [
+    "73 234 426",
+    "73 235 711"
+  ],
+  "fax": [
+    "73 234 477",
+    "73 232 869"
+  ],
+  "Email": "",
+  "idUni": "65ca29c6036cbf67a02b7fa4"
+},
+{
+  "_id": {
+    "$oid": "65f0b68a99be684b1e7e026e"
+  },
+  "nom": "Faculté de Médecine de Sousse",
+  "tel": [
+    "73 226 611",
+    "73 222 600"
+  ],
+  "fax": "73 224 899",
+  "Email": "",
+  "idUni": "65ca29c6036cbf67a02b7fa4"
+},
+{
+  "_id": {
+    "$oid": "65f0b72899be684b1e7e026f"
+  },
+  "tel": [
+    "73 301 800",
+    "73 301 902"
+  ],
+  "fax": [
+    "73 301 903",
+    "73 302 133"
+  ],
+  "Email": "flsh.sousse@fls.rnu.tn",
+  "idUni": "65ca29c6036cbf67a02b7fa4"
+},
+{
+  "_id": {
+    "$oid": "65f0b76699be684b1e7e0271"
+  },
+  "nom": "Institut Supérieur de Finance et de Fiscalité de Sousse",
+  "tel": "73 222 700",
+  "fax": "73 222 701",
+  "Email": "isffs@isffs.rnu.tn",
+  "idUni": "65ca29c6036cbf67a02b7fa4"
+},
+{
+  "_id": {
+    "$oid": "65f0b7bf99be684b1e7e0272"
+  },
+  "nom": "Institut Supérieur d'Informatique et des Technologies de Communication de Hammam Sousse",
+  "tel": "73 371 571",
+  "fax": "73 364 411",
+  "Email": "administration@infcom.rnu.tn",
+  "idUni": "65ca29c6036cbf67a02b7fa4"
+},
+{
+  "_id": {
+    "$oid": "65f0b80499be684b1e7e0273"
+  },
+  "nom": "Institut Supérieur du Transport et de la Logistique de Sousse",
+  "tel": [
+    "73 226 365",
+    "73 226 211"
+  ],
+  "fax": "73 226 211",
+  "Email": "istls@istls.rnu.tn",
+  "idUni": "65ca29c6036cbf67a02b7fa4"
+},
+{
+  "_id": {
+    "$oid": "65f0b85899be684b1e7e0274"
+  },
+  "nom": "Institut Supérieur de Beaux Arts de Sousse",
+  "tel": [
+    "73 214 333",
+    "73 214 334"
+  ],
+  "fax": "73 214 334",
+  "Email": "isbas@isbas.rnu.tn",
+  "idUni": "65ca29c6036cbf67a02b7fa4"
+},
+{
+  "_id": {
+    "$oid": "65f0b88799be684b1e7e0275"
+  },
+  "nom": "École Supérieure des Sciences et Techniques de la Santé de Sousse",
+  "tel": "73 369 307",
+  "fax": "73 369 308",
+  "Email": "contact@esstssousse.com",
+  "idUni": "65ca29c6036cbf67a02b7fa4"
+},
+{
+  "_id": {
+    "$oid": "65f0b8b499be684b1e7e0276"
+  },
+  "nom": "Institut Supérieur de Gestion de Sousse",
+  "tel": [
+    "73 332 976",
+    "73 332 977"
+  ],
+  "fax": "73 332 978",
+  "Email": "isgs@isgs.rnu.tn",
+  "idUni": "65ca29c6036cbf67a02b7fa4"
+},
+{
+  "_id": {
+    "$oid": "65f0b8e899be684b1e7e0277"
+  },
+  "nom": "Institut des Hautes Etudes Commerciales de Sousse",
+  "tel": [
+    "73 368 351",
+    "73 368 358"
+  ],
+  "fax": "73 368 350",
+  "Email": "ihecso@ihesco.rnu.tn",
+  "idUni": "65ca29c6036cbf67a02b7fa4"
+},
+{
+  "_id": {
+    "$oid": "65f0b91299be684b1e7e0278"
+  },
+  "nom": "Institut Supérieur de Musique de Sousse",
+  "tel": [
+    "73 239 553",
+    "73 239 554"
+  ],
+  "fax": "73 239 555",
+  "Email": "",
+  "idUni": "65ca29c6036cbf67a02b7fa4"
+},
+{
+  "_id": {
+    "$oid": "65f0b96099be684b1e7e0279"
+  },
+  "nom": "Institut Supérieur des Sciences Appliquées et de Technologie de Sousse",
+  "tel": "73 382 656",
+  "fax": "73 332 658",
+  "Email": "issats@issatso.rnu.tn",
+  "idUni": "65ca29c6036cbf67a02b7fa4"
+},
+{
+  "_id": {
+    "$oid": "65f0b9c099be684b1e7e027a"
+  },
+  "nom": "École Nationale d’Ingénieurs de Sousse",
+  "tel": [
+    "73 369 500",
+    "73 369 501",
+    "73 569 502"
+  ],
+  "fax": "73 369 506",
+  "Email": "Direction.eniso@eniso.rnu.tn",
+  "idUni": "65ca29c6036cbf67a02b7fa4"
+},
+{
+  "_id": {
+    "$oid": "65f0b9fa99be684b1e7e027b"
+  },
+  "nom": "Institut Supérieur Agronomique de Chott Mériem",
+  "tel": [
+    "73 327 542",
+    "73 327 534",
+    "73 327 544",
+    "73 327 546"
+  ],
+  "fax": "73 327 591",
+  "Email": "isa.chottmeriem@iresa.agrinet.tn",
+  "idUni": "65ca29c6036cbf67a02b7fa4"
+},
+{
+  "_id": {
+    "$oid": "65f0ba2399be684b1e7e027c"
+  },
+  "nom": "Institut Supérieur des Sciences infirmières de Sousse",
+  "tel": "73 237 811",
+  "fax": "73 237 911",
+  "Email": "",
+  "idUni": "65ca29c6036cbf67a02b7fa4"
+},
+{
+  "_id": {
+    "$oid": "65f0ba4699be684b1e7e027d"
+  },
+  "nom": "École Supérieure des Sciences et des technologies de Hammam Sousse",
+  "tel": [
+    "73 370 712",
+    "73 370 830"
+  ],
+  "fax": "73 330 710",
+  "Email": "essths@essths.rnu.tn",
+  "idUni": "65ca29c6036cbf67a02b7fa4"
+},
+{
+  "_id": {
+    "$oid": "65f0bb0599be684b1e7e0280"
+  },
+  "nom": "Faculté des Sciences Economique et de Gestion de Sousse",
+  "tel": "73 30 18 08",
+  "fax": "73 23 44 77",
+  "Email": "fsegsousse@fsegsousse.rnu.tn",
+  "idUni": "65ca29c6036cbf67a02b7fa4"
+},
+{
+  "_id": {
+    "$oid": "65f0bf5e99be684b1e7e0284"
+  },
+  "nom": "Institut Supérieur de Civilisation Islamique de Tunis",
+  "tel": [
+    "71 575 870",
+    "71 575 514"
+  ],
+  "fax": "71 576 555",
+  "Email": "isthtunis@yahoo.fr",
+  "idUni": "65ca2952036cbf67a02b7f9f"
+},
+{
+  "_id": {
+    "$oid": "65f0bf8499be684b1e7e0285"
+  },
+  "nom": "Institut Supérieur de Théologie de Tunis",
+  "tel": [
+    "71 569 233",
+    "71 569 237"
+  ],
+  "fax": "71 574 575",
+  "Email": "iscitunis@yahoo.fr",
+  "idUni": "65ca2952036cbf67a02b7f9f"
+},
+{
+  "_id": {
+    "$oid": "65f0bfa599be684b1e7e0286"
+  },
+  "nom": "Centre de Études Islamiques de Kairouan",
+  "tel": [
+    "77 284 844",
+    "77 282 669"
+  ],
+  "fax": [
+    "77 282 669",
+    "77 284 844"
+  ],
+  "Email": "kairouan@ceik.rnu.tn",
+  "idUni": "65ca2952036cbf67a02b7f9f"
+},
+{
+  "_id": {
+    "$oid": "65f0bfd299be684b1e7e0287"
+  },
+  "nom": "Institut Supérieur des Sciences Islamiques de Kairouan",
+  "tel": [
+    "77277724"
+  ],
+  "fax": "",
+  "Email": "",
+  "idUni": "65ca298d036cbf67a02b7fa1"
+},
+{
+  "_id": {
+    "$oid": "65f0c3da079f37b43213135c"
+  },
+  "nom": "Institut Supérieur de l'Education et de la Formation Continue",
+  "tel": [
+    "71 588 233",
+    "71 870 420"
+  ],
+  "fax": "71 872 617",
+  "Email": "decanat@fdspt.utm.tn",
+  "idUni": "65ca298d036cbf67a02b7fa1"
+}]

@@ -1,0 +1,64 @@
+[{
+  "_id": {
+    "$oid": "65e70a2d7fe0ffbcefe165c7"
+  },
+  "nom": "ezzine",
+  "prenom": "zeineb",
+  "email": "zaynebezzine@gmail.com",
+  "password": "456",
+  "tel": "53785806",
+  "role": "rect1",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e8489a8eb2ef9561f909a3"
+  },
+  "nom": "maatallah",
+  "prenom": "eya",
+  "email": "eyaeya@gmail.com",
+  "password": "eyaisitcom",
+  "tel": "25144639",
+  "role": "directeur",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e8c0e05fe0797a2371eabb"
+  },
+  "nom": "Bader",
+  "prenom": "Fatma",
+  "email": "fatma@gmail.com",
+  "password": "fatmaisg",
+  "CIN": "12889761",
+  "tel": "92144639",
+  "role": "rect1",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65f749e99425e3061222048d"
+  },
+  "role": "directeur",
+  "establishment": {
+    "$oid": "65f0b72899be684b1e7e026f"
+  },
+  "__v": 0,
+  "CIN": 12889761,
+  "email": "zaynebezjjj5@gmail.com",
+  "password": "eya",
+  "tel": "53144639"
+},
+{
+  "_id": {
+    "$oid": "65f754d7a8a0b1e41d6ee94b"
+  },
+  "nom": "maatallah",
+  "prenom": "eya",
+  "email": "eyaaaa@gmail.com",
+  "password": "aiesecaiesec",
+  "CIN": 14229761,
+  "tel": "53785806",
+  "role": "directeur",
+  "__v": 0
+}]
