@@ -4,16 +4,16 @@ const EtablissementModel = require("../models/Etablissement");
 //ajout directeur
 exports.ajoutDirecteur = async (req, res) => {
   try {
-    const { nom, prenom, email, password, tel, CIN, establishment } = req.body; 
+    const { nom, prenom, email, password, tel, CIN, establishmentId } = req.body;
     const role = "directeur";
-
+    console.log({ nom, prenom, email, password, tel, CIN, establishmentId });
     const directeurExist = await UserModel.findOne({ email });
     if (directeurExist) {
       return res.status(409).json({ message: "Directeur existe déjà" });
     }
 
     // Find the establishment by its ObjectId
-    const foundEstablishment = await EtablissementModel.findById(establishment._id);
+    const foundEstablishment = await EtablissementModel.findById(establishmentId);
     if (!foundEstablishment) {
       return res.status(404).json({ message: "Établissement non trouvé" });
     }
@@ -27,7 +27,7 @@ exports.ajoutDirecteur = async (req, res) => {
       role,
       CIN,
       establishmentId: foundEstablishment._id,
-      establishmentName: foundEstablishment.nom,
+      // establishmentName: foundEstablishment.nom,
     });
 
     await newDirector.save();

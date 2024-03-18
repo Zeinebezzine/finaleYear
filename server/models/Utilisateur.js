@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const Establishment = require("./Etablissement");
 const UserSchema = new mongoose.Schema({
   nom: String,
   prenom: String,
@@ -12,7 +13,7 @@ const UserSchema = new mongoose.Schema({
     required: true,
   },
   idUni: Number,
-  establishment: {
+  establishmentId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "Etablissement", // Reference to the Establishment model
   },
