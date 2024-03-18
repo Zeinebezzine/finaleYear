@@ -4,7 +4,7 @@ const EtablissementModel = require("../models/Etablissement");
 //ajout directeur
 exports.ajoutDirecteur = async (req, res) => {
   try {
-    const { nom, prenom, email, password, tel, CIN, establishment } = req.body; // Change 'establishment' to 'establishmentId'
+    const { nom, prenom, email, password, tel, CIN, establishment } = req.body; 
     const role = "directeur";
 
     const directeurExist = await UserModel.findOne({ email });
