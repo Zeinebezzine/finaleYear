@@ -4,16 +4,18 @@ const jwtSecret =
   "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!";
 const bcrypt = require("bcrypt");
 exports.register = (req, res) => {
-  const { email, password } = req.body;
-  UserModel.findOne({ email: email }).then((user) => {
-    if (user) {
-      res.json("Compte existant");
-    } else {
-      UserModel.create(req.body)
-        .then((result) => res.json("Compte crée"))
-        .catch((err) => res.json(err));
+  const { email, password, establishmentID } = req.body;
+  UserModel.findOne({ email: email, establishmentId: establishmentID }).then(
+    (user) => {
+      if (user) {
+        res.json("Compte existant");
+      } else {
+        UserModel.create(req.body)
+          .then((result) => res.json("Compte crée"))
+          .catch((err) => res.json(err));
+      }
     }
-  });
+  );
 };
 
 exports.login = (req, res) => {
@@ -25,9 +27,10 @@ exports.login = (req, res) => {
           const token = jwt.sign(
             {
               email: user.email,
-               id: user._id,
+              id: user._id,
               name: user.nom,
               role: user.role,
+              establishmentID: user.establishmentId,
             },
             jwtSecret,
             { expiresIn: "4h" },
