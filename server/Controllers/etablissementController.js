@@ -14,11 +14,11 @@ exports.getEstablishment = async (req, res) => {
 };
 
 exports.getEstablishment = (req, res) => {
-  const id = "65ca29c6036cbf67a02b7fa4"; // Assuming this is the university id
+  const id = "65ca29c6036cbf67a02b7fa4"; //  university id
 
-  EtablissementModel.find({ idUni: id }) // Use find instead of findOne
+  EtablissementModel.find({ idUni: id })
     .then((establishments) => {
-      // Change the variable name from establishment to establishments
+      
       if (establishments.length === 0) {
         // Check if establishments array is empty
         return res

@@ -7,8 +7,8 @@ const userController = require("./Controllers/userController");
 const universityController = require("./Controllers/universityController");
 const etablissementController = require("./Controllers/etablissementController");
 const directorController = require("./Controllers/directorController");
-const financierController = require("./Controllers/financierController");
-const pedagogiqueController = require("./Controllers/pedagogiqueController");
+const agentController = require("./Controllers/agentController");
+const Rect2Controller = require("./Controllers/Rect2Controller");
 
 const cookieParser = require("cookie-parser");
 const app = express();
@@ -33,10 +33,7 @@ app.get(
   "/establishments/:universityId",
   etablissementController.getEstablishment
 );
-app.get(
-  "/etablissement",
-  etablissementController.getEstablishment
-);
+app.get("/etablissement", etablissementController.getEstablishment);
 app.post(
   "/Rect1/directors",
   middleware.authMiddleware,
@@ -44,8 +41,12 @@ app.post(
 );
 app.get("/Rect1/directors", directorController.getDirectors);
 app.put("/directors/:id", directorController.updateDirector);
-app.post("/pedagogique", pedagogiqueController.ajoutPedagogique);
-app.post("/financier", financierController.ajoutFinancier);
+app.post("/Rect2", Rect2Controller.ajoutRect2);
+app.get("/Rect2", Rect2Controller.getRect2);
+app.post("/agent", agentController.ajoutAgent);
+app.get("/agent", agentController.getAgents);
+app.put("/agent/:id", agentController.updateAgent);
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });

@@ -12,7 +12,7 @@ const UserSchema = new mongoose.Schema({
     enum: ["directeur", "rect1", "rect2", "financier", "pedagogique"],
     required: true,
   },
-  idUni: Number,
+  idUni: String,
   establishmentId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "Etablissement", // Reference to the Establishment model
