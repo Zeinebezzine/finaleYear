@@ -3,7 +3,7 @@ const professeurSchema = new mongoose.Schema({
   nomComplet: String,
   email: String,
   CIN: String,
-  RIB: Number,
+  RIB: String,
   tel: String,
   grade: String,
   statut: String,

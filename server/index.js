@@ -53,6 +53,7 @@ app.put("/agent/:id", agentController.updateAgent);
 app.post("/prof", profController.ajoutProf);
 app.get("/prof", profController.getProf);
 app.put("/prof/:id", profController.updateProf);
+app.delete("/prof/:id", profController.deleteProf);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

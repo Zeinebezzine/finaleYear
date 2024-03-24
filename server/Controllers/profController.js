@@ -68,10 +68,23 @@ exports.updateProf = async (req, res) => {
       updatedRecord,
       { new: true }
     );
-    console.log("success");
     res.json(updatedProf);
   } catch (error) {
     console.error("Error updating professor:", error);
+    res.status(500).json({ message: "Internal Server Error" });
+  }
+};
+
+exports.deleteProf = async (req, res) => {
+  try {
+    const profId = req.params.id;
+    const deletedProf = await ProfesseurModel.findByIdAndDelete(profId);
+    if (!deletedProf) {
+      return res.status(404).json({ message: "Professor not found" });
+    }
+    res.status(200).json({ message: "Professor deleted successfully!" });
+  } catch (error) {
+    console.erroe("Error deleting prof", error);
     res.status(500).json({ message: "Internal Server Error" });
   }
 };
