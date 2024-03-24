@@ -47,11 +47,17 @@ exports.getDirectors = async (req, res) => {
     const directors = await UserModel.find({ role: "directeur" });
 
     // Fetch establishment name for each director
-    const directorsWithEstablishment = await Promise.all(directors.map(async (director) => {
-      const establishment = await EtablissementModel.findById(director.establishmentId);
-      const establishmentName = establishment ? establishment.nom : "Unknown Establishment";
-      return { ...director._doc, Etablissement: establishmentName }; // Include establishment name in director object
-    }));
+    const directorsWithEstablishment = await Promise.all(
+      directors.map(async (director) => {
+        const establishment = await EtablissementModel.findById(
+          director.establishmentId
+        );
+        const establishmentName = establishment
+          ? establishment.nom
+          : "Unknown Establishment";
+        return { ...director._doc, Etablissement: establishmentName }; // Include establishment name in director object
+      })
+    );
 
     res.json(directorsWithEstablishment);
   } catch (error) {
@@ -70,6 +76,7 @@ exports.updateDirector = async (req, res) => {
       updatedRecord,
       { new: true }
     );
+    
     res.json(updatedDirector);
   } catch (error) {
     console.error("Error updating director:", error);
