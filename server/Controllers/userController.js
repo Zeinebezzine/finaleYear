@@ -3,20 +3,20 @@ const jwt = require("jsonwebtoken");
 const jwtSecret =
   "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!";
 const bcrypt = require("bcrypt");
-exports.register = (req, res) => {
-  const { email, password, establishmentID } = req.body;
-  UserModel.findOne({ email: email, establishmentId: establishmentID }).then(
-    (user) => {
-      if (user) {
-        res.json("Compte existant");
-      } else {
-        UserModel.create(req.body)
-          .then((result) => res.json("Compte crée"))
-          .catch((err) => res.json(err));
-      }
-    }
-  );
-};
+// exports.register = (req, res) => {
+//   const { email, password, establishmentID } = req.body;
+//   UserModel.findOne({ email: email, establishmentId: establishmentID }).then(
+//     (user) => {
+//       if (user) {
+//         res.json("Compte existant");
+//       } else {
+//         UserModel.create(req.body)
+//           .then((result) => res.json("Compte crée"))
+//           .catch((err) => res.json(err));
+//       }
+//     }
+//   );
+// };
 
 exports.login = (req, res) => {
   const { email, password } = req.body;

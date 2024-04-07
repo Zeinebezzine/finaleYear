@@ -10,7 +10,8 @@ exports.ajoutDirecteur = async (req, res) => {
     console.log({ nom, prenom, email, password, tel, CIN, establishmentId });
     const directeurExist = await UserModel.findOne({ email });
     if (directeurExist) {
-      return res.status(409).json({ message: "Directeur existe déjà" });
+      return res.status(409).json({ statusCode: 409, message: "Directeur existe déjà" });
+
     }
 
     // Find the establishment by its ObjectId
@@ -76,7 +77,7 @@ exports.updateDirector = async (req, res) => {
       updatedRecord,
       { new: true }
     );
-    
+
     res.json(updatedDirector);
   } catch (error) {
     console.error("Error updating director:", error);

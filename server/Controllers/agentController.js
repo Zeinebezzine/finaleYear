@@ -30,7 +30,6 @@ exports.ajoutAgent = async (req, res) => {
 
 exports.getAgents = async (req, res) => {
   try {
-    // Assuming there is only one Rect2 user
     const agents = await UserModel.find({
       role: { $in: ["financier", "pedagogique"] },
     });
@@ -59,3 +58,4 @@ exports.updateAgent = async (req, res) => {
     res.status(500).json({ error: "Internal Server Error" });
   }
 };
+
