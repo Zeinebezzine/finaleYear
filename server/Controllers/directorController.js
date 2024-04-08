@@ -33,7 +33,7 @@ exports.ajoutDirecteur = async (req, res) => {
       establishmentId: foundEstablishment._id,
       establishmentName: foundEstablishment.nom,
     });
-
+    
     await newDirector.save();
     res.status(201).json({ message: "Directeur ajouté avec succès" });
   } catch (error) {

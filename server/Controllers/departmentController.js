@@ -28,3 +28,17 @@ exports.getDepartement = async(req, res)=>{
   } catch (error) {
     res.status(500).json({ message: "Internal Server Error" });
   }}
+
+  exports.getDepartementById = async (req, res) => {
+    try {
+      const departmentId = req.params.id;
+      const department = await DepartmentModel.findById(departmentId);
+      if (!department) {
+        return res.status(404).json({ message: 'Department not found' });
+      }
+      res.json(department);
+    } catch (error) {
+      console.error("Error fetching department:", error);
+      res.status(500).json({ message: "Internal Server Error" });
+    }
+  };

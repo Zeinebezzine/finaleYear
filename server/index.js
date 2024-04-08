@@ -2,6 +2,10 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const middleware = require("./Middleware/authMiddleware");
+const multer = require("multer");
+// Multer setup for file upload
+const storage = multer.memoryStorage();
+const upload = multer({ storage: storage });
 
 const userController = require("./Controllers/userController");
 const universityController = require("./Controllers/universityController");
@@ -60,6 +64,11 @@ app.post("/prof", profController.ajoutProf);
 app.get("/prof", profController.getProf);
 app.put("/prof/:id", profController.updateProf);
 app.delete("/prof/:id", profController.deleteProf);
+app.post(
+  "/prof/upload",
+  upload.single("excelFile"),
+  profController.uploadFileAndSaveData
+);
 
 //les matieres
 app.post("/matiere", matiereController.ajoutMatiere);
@@ -76,7 +85,7 @@ app.post("/cours", coursController.ajoutCours);
 //departments
 app.post("/departement", departementController.ajoutDepartemnt);
 app.get("/departement", departementController.getDepartement);
-
+app.get("/departement/:id", departementController.getDepartementById);
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });

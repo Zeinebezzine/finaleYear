@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 
 const professeurSchema = new mongoose.Schema({
   nomComplet: String,
+  nomComplet_arabe: String,
   email: String,
   CIN: String,
   RIB: String,
@@ -18,7 +19,11 @@ const professeurSchema = new mongoose.Schema({
   },
   agentId: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "Utilisateur", // Reference to the Establishment model
+    ref: "Utilisateur",
+  },
+  departmentId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Departement",
   },
 });
 const ProfesseurModel = mongoose.model("professeurs", professeurSchema);

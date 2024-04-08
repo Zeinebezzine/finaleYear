@@ -1,11 +1,13 @@
 const ProfesseurModel = require("../models/Professeur");
 const UserModel = require("../models/Utilisateur");
 const DepartementModel = require("../models/Departement");
+const xlsx = require("xlsx");
 
 exports.ajoutProf = async (req, res) => {
   try {
     const {
       nomComplet,
+      nomComplet_arabe,
       email,
       CIN,
       RIB,
@@ -32,6 +34,7 @@ exports.ajoutProf = async (req, res) => {
     // Create a new ProfesseurModel instance
     const newProf = new ProfesseurModel({
       nomComplet,
+      nomComplet_arabe,
       email,
       CIN,
       RIB,
@@ -113,3 +116,25 @@ exports.deleteProf = async (req, res) => {
 //     res.status(500).json({ message: "Internal Server Error" });
 //   }
 // };
+
+//upload excel files and save in database
+exports.uploadFileAndSaveData = async (req, res) => {
+  try {
+    if (!req.file) {
+      return res.status(400).json({ message: "No file uploaded" });
+    }
+    
+    // Parse the uploaded Excel file
+    const workbook = xlsx.read(req.file.buffer, { type: "buffer" });
+    const sheetName = workbook.SheetNames[0];
+    const excelData = xlsx.utils.sheet_to_json(workbook.Sheets[sheetName]);
+    
+    // Save the data to the database
+    await ProfesseurModel.insertMany(excelData);
+
+    return res.status(200).json({ message: "File uploaded and data saved successfully" });
+  } catch (error) {
+    console.error("Error uploading file", error);
+    return res.status(500).json({ message: "Internal server error" });
+  }
+};
