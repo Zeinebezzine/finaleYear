@@ -2,8 +2,8 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const middleware = require("./Middleware/authMiddleware");
-const multer = require("multer");
 // Multer setup for file upload
+const multer = require("multer");
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
@@ -85,7 +85,9 @@ app.post("/cours", coursController.ajoutCours);
 //departments
 app.post("/departement", departementController.ajoutDepartemnt);
 app.get("/departement", departementController.getDepartement);
+app.get("/export/department", departementController.getDept);
 app.get("/departement/:id", departementController.getDepartementById);
+app.delete("/departement/:id", departementController.deleteDepartment);
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });

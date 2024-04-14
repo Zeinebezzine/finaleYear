@@ -1,19 +1,33 @@
 const coursModel = require("../models/Cours");
 const ProfesseurModel = require("../models/Professeur");
 const MatiereModel = require("../models/Matiere");
-// const ClasseModel = require("../models/Classe");
+const ClasseModel = require("../models/Classe");
 
 exports.ajoutCours = async (req, res) => {
   try {
-    const { coeff, type, nbre_h, classId, matId, profId } = req.body;
-    console.log(req.body);
-    const coursExiste = await coursModel.findOne({
-      coeff,
-      type,
-      nbre_h,
+    const {
+      semestre,
       classId,
       matId,
       profId,
+      nbr_h_C,
+      nbr_grp_C,
+      nbr_semaine_C,
+      nbr_h_TD,
+      nbr_grp_TD,
+      nbr_semaine_TD,
+      nbr_h_TP,
+      nbr_grp_TP,
+      nbr_semaine_TP,
+      nbr_h_Cintg,
+      nbr_grp_Cintg,
+      nbr_semaine_Cintg,
+    } = req.body;
+    console.log(req.body);
+    const coursExiste = await coursModel.findOne({
+      profId,
+      matId,
+      classId,
     });
     if (coursExiste) {
       return res.status(409).json({ message: "Cours existe déjà" });
@@ -28,15 +42,27 @@ exports.ajoutCours = async (req, res) => {
     if (!matiereExiste) {
       return res.status(404).json({ message: "Matiere non trouvé" });
     }
+    const classExiste = await ClasseModel.findById(classId);
+    if (!classExiste) {
+      return res.status(404).json({ message: "Classe non trouvé" });
+    }
     const newCours = new coursModel({
-      coeff,
-      type,
-      nbre_h,
-      classId,
+      semestre,
+      nbr_h_C,
+      nbr_grp_C,
+      nbr_semaine_C,
+      nbr_h_TD,
+      nbr_grp_TD,
+      nbr_semaine_TD,
+      nbr_h_TP,
+      nbr_grp_TP,
+      nbr_semaine_TP,
+      nbr_h_Cintg,
+      nbr_grp_Cintg,
+      nbr_semaine_Cintg,
       matId: matiereExiste._id,
       profId: foundProf._id,
-      profName: foundProf.nomComplet,
-      matierName: matiereExiste.libelle,
+      classId: classExiste._id,
     });
     await newCours.save();
     res.status(201).json({ message: "Cours ajouté avec succès" });
