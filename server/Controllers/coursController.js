@@ -71,3 +71,17 @@ exports.ajoutCours = async (req, res) => {
     res.status(500).json({ message: "Internal Server Error" });
   }
 };
+
+exports.getCoursById = async (req, res) => {
+  try {
+    const coursId = req.params.id;
+    const cours = await coursModel.findById(coursId);
+    if (!cours) {
+      return res.status(404).json("Course not found");
+    }
+    res.json(cours);
+  } catch (error) {
+    console.error("error fetching cours ", error);
+    res.status(500).json({ message: "Internal Server Error" });
+  }
+};

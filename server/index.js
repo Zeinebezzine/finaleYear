@@ -81,6 +81,7 @@ app.delete("/classe/:id", classeController.deleteClasse);
 
 //cours
 app.post("/cours", coursController.ajoutCours);
+app.get("/cours/:id", coursController.getCoursById);
 
 //departments
 app.post("/departement", departementController.ajoutDepartemnt);
