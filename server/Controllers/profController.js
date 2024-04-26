@@ -63,28 +63,33 @@ exports.ajoutProf = async (req, res) => {
 //prof/semester
 exports.addHoursPerSemester = async (req, res) => {
   try {
-    const { professorId, semesterId, dueCours, dueTD, dueTP, dueCintg } =
-      req.body;
-
+    const { professorId, semesterId, dueCours, dueTD, dueTP, dueCintg } = req.body;
+  
+    // Check if a record already exists with the same professorId and semesterId
+    const existingProfSemester = await ProfSemesterModel.findOne({ professorId, semesterId });
+  
+    if (existingProfSemester) {
+      return res.status(400).json({ message: "A record with the same professor and semester already exists" });
+    }
+  
     // Create a new ProfSemesterModel instance
     const newProfSemester = new ProfSemesterModel({
       professorId,
       semesterId,
-      dueCours, dueTD, dueTP, dueCintg
+      dueCours,
+      dueTD,
+      dueTP,
+      dueCintg,
     });
-
+  
     // Save the new ProfSemester record
     await newProfSemester.save();
-    res
-      .status(201)
-      .json({ message: "Heures ajoutées avec succès pour ce semestre" });
+    res.status(201).json({ message: "Heures ajoutées avec succès pour ce semestre" });
   } catch (error) {
     console.error("Erreur d'ajout d'heures pour ce semestre:", error);
-    res
-      .status(500)
-      .json({ message: "Erreur d'ajout d'heures pour ce semestre" });
+    res.status(500).json({ message: "Erreur d'ajout d'heures pour ce semestre" });
   }
-};
+}
 
 exports.getProf = async (req, res) => {
   try {
@@ -172,5 +177,12 @@ exports.uploadFileAndSaveData = async (req, res) => {
 exports.getProfById = async (req, res) => {
   const profId = req.params.id;
   const prof = await ProfesseurModel.findById(profId);
+  res.json(prof);
+};
+
+//getProfDataForSemstersHours
+exports.getProfSemeseterById = async (req, res) => {
+  const profId = req.params.id;
+  const prof = await ProfSemesterModel.findById(profId);
   res.json(prof);
 };
