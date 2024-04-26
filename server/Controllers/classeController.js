@@ -42,3 +42,13 @@ exports.deleteClasse = async (req, res) => {
     res.status(500).json({ message: "Internal Server Error" });
   }
 };
+exports.getClassById = async (req, res) => {
+  const classId = req.params.id;
+  try {
+    const Classe = await ClasseModel.findOne({ _id: classId });
+    res.json(Classe);
+  } catch (error) {
+    console.error("Error fetching class by ID:", error);
+    res.status(500).json({ message: "Internal server error" });
+  }
+};

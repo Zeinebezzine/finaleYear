@@ -11,5 +11,9 @@ exports.getUniversities = (req, res) => {
     .catch((error) => res.status(500).json({ error: "Internal server error" }));
 };
 
-
-
+//getByID
+exports.getUniById = async (req, res) => {
+  const UniId = req.params.id;
+  const Uni = await UniversityModel.findById(UniId);
+  res.json(Uni);
+};

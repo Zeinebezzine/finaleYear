@@ -1,6 +1,7 @@
 const ProfesseurModel = require("../models/Professeur");
 const UserModel = require("../models/Utilisateur");
 const DepartementModel = require("../models/Departement");
+const ProfSemesterModel = require("../models/ProfSemester");
 const xlsx = require("xlsx");
 
 exports.ajoutProf = async (req, res) => {
@@ -46,7 +47,7 @@ exports.ajoutProf = async (req, res) => {
       dueTD,
       dueTP,
       establishmentId,
-      agentId,
+      // agentId,
       departmentId,
     });
 
@@ -56,6 +57,32 @@ exports.ajoutProf = async (req, res) => {
   } catch (error) {
     console.error("Erreur d'ajout:", error);
     res.status(500).json({ message: "Erreur d'ajout" });
+  }
+};
+
+//prof/semester
+exports.addHoursPerSemester = async (req, res) => {
+  try {
+    const { professorId, semesterId, dueCours, dueTD, dueTP, dueCintg } =
+      req.body;
+
+    // Create a new ProfSemesterModel instance
+    const newProfSemester = new ProfSemesterModel({
+      professorId,
+      semesterId,
+      dueCours, dueTD, dueTP, dueCintg
+    });
+
+    // Save the new ProfSemester record
+    await newProfSemester.save();
+    res
+      .status(201)
+      .json({ message: "Heures ajoutées avec succès pour ce semestre" });
+  } catch (error) {
+    console.error("Erreur d'ajout d'heures pour ce semestre:", error);
+    res
+      .status(500)
+      .json({ message: "Erreur d'ajout d'heures pour ce semestre" });
   }
 };
 
@@ -139,4 +166,11 @@ exports.uploadFileAndSaveData = async (req, res) => {
     console.error("Error uploading file", error);
     return res.status(500).json({ message: "Internal server error" });
   }
+};
+
+//getProf by Id
+exports.getProfById = async (req, res) => {
+  const profId = req.params.id;
+  const prof = await ProfesseurModel.findById(profId);
+  res.json(prof);
 };

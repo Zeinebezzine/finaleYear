@@ -28,6 +28,19 @@ exports.ajoutCours = async (req, res) => {
       profId,
       matId,
       classId,
+      semestre,
+      nbr_h_C,
+      nbr_grp_C,
+      nbr_semaine_C,
+      nbr_h_TD,
+      nbr_grp_TD,
+      nbr_semaine_TD,
+      nbr_h_TP,
+      nbr_grp_TP,
+      nbr_semaine_TP,
+      nbr_h_Cintg,
+      nbr_grp_Cintg,
+      nbr_semaine_Cintg,
     });
     if (coursExiste) {
       return res.status(409).json({ message: "Cours existe déjà" });
@@ -72,16 +85,68 @@ exports.ajoutCours = async (req, res) => {
   }
 };
 
-exports.getCoursById = async (req, res) => {
+exports.getCourseByClassId = async (req, res) => {
+  const classId = req.params.id;
   try {
-    const coursId = req.params.id;
-    const cours = await coursModel.findById(coursId);
-    if (!cours) {
-      return res.status(404).json("Course not found");
-    }
-    res.json(cours);
+    const courses = await coursModel.find({ classId });
+    res.status(200).json(courses);
   } catch (error) {
-    console.error("error fetching cours ", error);
-    res.status(500).json({ message: "Internal Server Error" });
+    console.error("Error fetching courses:", error);
+    res.status(500).json({ message: "Internal server error" });
+  }
+};
+
+//exporting
+exports.exportExcelCourse = async (req, res) => {
+  try {
+    const courses = await coursModel.find().populate('profId').populate('matId').populate('classId');
+
+
+    const formattedCourses = await Promise.all(
+      courses.map(async (course) => {
+        const professor = await ProfesseurModel.findById(course.profId);
+        const subject = await MatiereModel.findById(course.matId);
+        const classData = await ClasseModel.findById(course.classId);
+
+        return {
+          Classe: classData
+            ? `${classData.niveau} ${classData.type} ${classData.libelle}`
+            : "",
+          semestre: course.semestre,
+          professorName: professor ? professor.nomComplet : "",
+          MatierName: subject ? subject.nom_matiere : "",
+          DepartmentName: classData ? classData.name : "",
+          nbr_h_C: course.nbr_h_C,
+          nbr_grp_C: course.nbr_grp_C,
+          nbr_semaine_C: course.nbr_semaine_C,
+          nbr_h_TD: course.nbr_h_TD,
+          nbr_grp_TD: course.nbr_grp_TD,
+          nbr_semaine_TD: course.nbr_semaine_TD,
+          nbr_h_TP: course.nbr_h_TP,
+          nbr_grp_TP: course.nbr_grp_TP,
+          nbr_semaine_TP: course.nbr_semaine_TP,
+          nbr_h_Cintg: course.nbr_h_Cintg,
+          nbr_grp_Cintg: course.nbr_grp_Cintg,
+          nbr_semaine_Cintg: course.nbr_semaine_Cintg,
+        };
+      })
+    );
+
+    const workbook = XLSX.utils.book_new();
+    const worksheet = XLSX.utils.json_to_sheet(formattedCourses);
+    XLSX.utils.book_append_sheet(workbook, worksheet, "Cours");
+
+    const excelBuffer = XLSX.write(workbook, {
+      bookType: "xlsx",
+      type: "array",
+    });
+    const excelBlob = new Blob([excelBuffer], {
+      type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    });
+    saveAs(excelBlob, "courses.xlsx");
+    res.status(200).send("Excel file generated and downloaded successfully!");
+  } catch (error) {
+    console.error("Error generating Excel file:", error);
+    res.status(500).json({ message: "Internal server error" });
   }
 };

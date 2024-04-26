@@ -18,7 +18,6 @@ exports.getEstablishment = (req, res) => {
 
   EtablissementModel.find({ idUni: id })
     .then((establishments) => {
-      
       if (establishments.length === 0) {
         // Check if establishments array is empty
         return res
@@ -31,4 +30,10 @@ exports.getEstablishment = (req, res) => {
       console.error("Error fetching establishments:", error); // Corrected log message
       res.status(500).json({ error: "Internal server error" });
     });
+};
+//getEstablishmentByID
+exports.getEstById = async (req, res) => {
+  const EstId = req.params.id;
+  const Est = await EtablissementModel.findById(EstId);
+  res.json(Est);
 };

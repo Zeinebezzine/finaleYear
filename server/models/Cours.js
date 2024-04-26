@@ -1,3 +1,4 @@
+
 const mongoose = require("mongoose");
 
 const CoursSchema = new mongoose.Schema({

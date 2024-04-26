@@ -7,12 +7,11 @@ exports.ajoutMatiere = async (req, res) => {
     if (matierExist) {
       return res.status(409).json({ message: "Matiere existe" });
     }
-   
+
     const newMatiere = new MatiereModel({
       nom_matiere,
     });
     await newMatiere.save();
-   
   } catch (error) {
     console.error("Erreur d'ajout d'une matiere", error);
     res.status(500).json({ message: "Erreur d'ajout" });
@@ -40,4 +39,11 @@ exports.deleteMatiere = async (req, res) => {
     console.error("Error deleting  a subject", error);
     res.status(500).json({ messaga: "Internal Server Error" });
   }
+};
+
+//get subject byID
+exports.getMatierById = async (req, res) => {
+  const matiereId = req.params.id;
+  const matiere = await MatiereModel.findById(matiereId);
+  res.json(matiere);
 };

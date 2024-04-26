@@ -10,8 +10,9 @@ exports.ajoutDirecteur = async (req, res) => {
     console.log({ nom, prenom, email, password, tel, CIN, establishmentId });
     const directeurExist = await UserModel.findOne({ email });
     if (directeurExist) {
-      return res.status(409).json({ statusCode: 409, message: "Directeur existe déjà" });
-
+      return res
+        .status(409)
+        .json({ statusCode: 409, message: "Directeur existe déjà" });
     }
 
     // Find the establishment by its ObjectId
@@ -33,7 +34,7 @@ exports.ajoutDirecteur = async (req, res) => {
       establishmentId: foundEstablishment._id,
       establishmentName: foundEstablishment.nom,
     });
-    
+
     await newDirector.save();
     res.status(201).json({ message: "Directeur ajouté avec succès" });
   } catch (error) {
