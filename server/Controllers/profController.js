@@ -16,11 +16,10 @@ exports.ajoutProf = async (req, res) => {
       grade,
       statut,
       DDO,
-      dueCours,
-      dueTD,
-      dueTP,
+      // dueCours,
+      // dueTD,
+      // dueTP,
       establishmentId,
-      agentId,
       departmentId,
     } = req.body;
 
@@ -43,9 +42,9 @@ exports.ajoutProf = async (req, res) => {
       grade,
       statut,
       DDO,
-      dueCours,
-      dueTD,
-      dueTP,
+      // dueCours,
+      // dueTD,
+      // dueTP,
       establishmentId,
       // agentId,
       departmentId,
@@ -63,15 +62,21 @@ exports.ajoutProf = async (req, res) => {
 //prof/semester
 exports.addHoursPerSemester = async (req, res) => {
   try {
-    const { professorId, semesterId, dueCours, dueTD, dueTP, dueCintg } = req.body;
-  
+    const { professorId, semesterId, dueCours, dueTD, dueTP, dueCintg } =
+      req.body;
+
     // Check if a record already exists with the same professorId and semesterId
-    const existingProfSemester = await ProfSemesterModel.findOne({ professorId, semesterId });
-  
+    const existingProfSemester = await ProfSemesterModel.findOne({
+      professorId,
+      semesterId,
+    });
+
     if (existingProfSemester) {
-      return res.status(400).json({ message: "A record with the same professor and semester already exists" });
+      return res.status(400).json({
+        message: "A record with the same professor and semester already exists",
+      });
     }
-  
+
     // Create a new ProfSemesterModel instance
     const newProfSemester = new ProfSemesterModel({
       professorId,
@@ -81,15 +86,19 @@ exports.addHoursPerSemester = async (req, res) => {
       dueTP,
       dueCintg,
     });
-  
+
     // Save the new ProfSemester record
     await newProfSemester.save();
-    res.status(201).json({ message: "Heures ajoutées avec succès pour ce semestre" });
+    res
+      .status(201)
+      .json({ message: "Heures ajoutées avec succès pour ce semestre" });
   } catch (error) {
     console.error("Erreur d'ajout d'heures pour ce semestre:", error);
-    res.status(500).json({ message: "Erreur d'ajout d'heures pour ce semestre" });
+    res
+      .status(500)
+      .json({ message: "Erreur d'ajout d'heures pour ce semestre" });
   }
-}
+};
 
 exports.getProf = async (req, res) => {
   try {
@@ -180,9 +189,22 @@ exports.getProfById = async (req, res) => {
   res.json(prof);
 };
 
-//getProfDataForSemstersHours
 exports.getProfSemeseterById = async (req, res) => {
-  const profId = req.params.id;
-  const prof = await ProfSemesterModel.findById(profId);
-  res.json(prof);
+  try {
+    const { id } = req.params;
+    console.log("Received professorId:", id);
+
+    const profSemesters = await ProfSemesterModel.find({ professorId: id });
+
+    if (!profSemesters || profSemesters.length === 0) {
+      return res.status(404).json({
+        message: "No ProfSemesters found for the provided professorId",
+      });
+    }
+
+    res.json(profSemesters);
+  } catch (error) {
+    console.error("Error fetching ProfSemesters:", error);
+    res.status(500).json({ message: "Internal Server Error" });
+  }
 };

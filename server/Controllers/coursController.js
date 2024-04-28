@@ -99,8 +99,11 @@ exports.getCourseByClassId = async (req, res) => {
 //exporting
 exports.exportExcelCourse = async (req, res) => {
   try {
-    const courses = await coursModel.find().populate('profId').populate('matId').populate('classId');
-
+    const courses = await coursModel
+      .find()
+      .populate("profId")
+      .populate("matId")
+      .populate("classId");
 
     const formattedCourses = await Promise.all(
       courses.map(async (course) => {
@@ -148,5 +151,18 @@ exports.exportExcelCourse = async (req, res) => {
   } catch (error) {
     console.error("Error generating Excel file:", error);
     res.status(500).json({ message: "Internal server error" });
+  }
+};
+
+exports.getCours = async (req, res) => {
+  try {
+    const courses = await coursModel.find();
+    if (courses.length === 0) {
+      return res.status(404).json({ message: "Aucun cours" });
+    }
+    res.json(courses);
+  } catch (error) {
+    console.error("Erreur d'affichage", error);
+    res.status(500).json({ message: "Internal Server Error" });
   }
 };

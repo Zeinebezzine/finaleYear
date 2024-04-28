@@ -75,6 +75,10 @@ app.put("/agent/:id", agentController.updateAgent);
 app.post("/prof", profController.ajoutProf);
 app.get("/prof", profController.getProf);
 app.post("/prof/addHoursPerSemester", profController.addHoursPerSemester);
+app.get(
+  "/prof/getProfSemestersByProfessorId/:professorId",
+  profController.getProfSemeseterById
+);
 app.get("/prof/:id", profController.getProfById);
 app.put("/prof/:id", profController.updateProf);
 app.delete("/prof/:id", profController.deleteProf);
@@ -99,6 +103,7 @@ app.post("/cours", coursController.ajoutCours);
 //app.get("/cours/:id", coursController.getCourseById);
 app.get("/cours/:id", coursController.getCourseByClassId);
 app.get("/export-excel", coursController.exportExcelCourse);
+app.get("/cours", coursController.getCours);
 
 //departments
 app.post("/departement", departementController.ajoutDepartemnt);
